@@ -80,15 +80,12 @@ export default function Header() {
 						WhatsApp
 					</button>
 					<button
-						onClick={() => window.open('https://exemplo.com/aluguel', '_blank')}
+						onClick={() =>
+							window.open('https://espiritoludico.lends.com.br/', '_blank')
+						}
 						className={`${styles.button} ${styles.rentButton}`}
 					>
-						<img
-							src='/Pino_branco.png'
-							alt='WhatsApp'
-							width={20}
-							height={20}
-						/>
+						<img src='/Pino_branco.png' alt='WhatsApp' width={20} height={20} />
 						Alugar Jogos
 					</button>
 				</div>

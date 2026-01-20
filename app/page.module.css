@@ -3,7 +3,7 @@
 }
 
 .main {
-  padding-top: 80px; /* Espaço para o header fixo */
+  padding-top: 76px; 
 }
 
 /* Animações globais */
@@ -52,6 +52,6 @@
 /* Responsividade adicional */
 @media (max-width: 768px) {
   .main {
-    padding-top: 100px; /* Mais espaço para header em mobile */
+    padding-top: 57px; 
   }
 }
