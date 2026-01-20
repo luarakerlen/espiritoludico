@@ -1,6 +1,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-rose: #e6397d;
+  --primary-blue: #005f99;
+  --text-light: #666666;
+  --border-light: #e5e5e5;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +38,40 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seleção de texto */
+::selection {
+  background: var(--primary-rose);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--primary-rose);
+  color: white;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-rose);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d91f6b;
 }
 
 @media (prefers-color-scheme: dark) {

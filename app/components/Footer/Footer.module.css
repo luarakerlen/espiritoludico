@@ -1,0 +1,421 @@
+.footer {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-rose), var(--primary-blue));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  padding: 4rem 2rem 2rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-rose);
+}
+
+.description {
+  color: #b0b0b0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.socialButton:hover {
+  background: var(--primary-rose);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(230, 57, 125, 0.3);
+}
+
+.links h3,
+.services h3,
+.contact h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: white;
+  position: relative;
+}
+
+.links h3::after,
+.services h3::after,
+.contact h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--primary-rose);
+}
+
+.links ul,
+.services ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links li button,
+.services li button {
+  background: none;
+  border: none;
+  color: #b0b0b0;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  padding: 0.25rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.links li button:hover,
+.services li button:hover {
+  color: var(--primary-rose);
+  transform: translateX(5px);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.contactItem div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactItem strong {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.contactItem p,
+.contactItem button {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.contactItem button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.contactItem button:hover {
+  color: var(--primary-rose);
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--primary-rose), var(--primary-blue));
+  margin: 0 2rem 2rem;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+}
+
+.cta h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.cta p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.primaryButton {
+  background: white;
+  color: var(--primary-rose);
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: var(--primary-blue);
+  transform: translateY(-3px);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 2rem;
+}
+
+.bottomContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright {
+  color: #b0b0b0;
+  font-size: 0.85rem;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.bottomLinks button {
+  background: none;
+  border: none;
+  color: #b0b0b0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.bottomLinks button:hover {
+  color: var(--primary-rose);
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-rose);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(230, 57, 125, 0.3);
+}
+
+.scrollTop:hover {
+  background: #d91f6b;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(230, 57, 125, 0.4);
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .about {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .about {
+    grid-column: 1;
+  }
+
+  .cta {
+    margin: 0 1rem 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .cta h3 {
+    font-size: 1.3rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+
+  .bottom {
+    padding: 1.5rem 1rem;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bottomLinks {
+    justify-content: center;
+  }
+
+  .scrollTop {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta h3 {
+    font-size: 1.2rem;
+  }
+
+  .socialButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .scrollTop {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
