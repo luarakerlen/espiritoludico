@@ -70,8 +70,8 @@ export default function Eventos() {
 				'Deixe seu aniversário ainda mais especial com jogos divertidos para todas as idades.',
 			features: [
 				'Jogos adequados para a faixa etária',
-				'Monitor especializado disponível',
-				'Decorções temáticas',
+				'Monitoria especializada disponível',
+				'Brincadeiras e competições saudáveis',
 			],
 		},
 		{
@@ -80,9 +80,9 @@ export default function Eventos() {
 			description:
 				'Fortaleça o espírito de equipe com atividades que promovem colaboração e comunicação.',
 			features: [
-				'Jogos de team building',
-				'Competições amistosas',
-				'Medalhas personalizadas',
+				'Jogos para descontração',
+				'Competições saudáveis',
+				'Monitoria para explicação das regras',
 			],
 		},
 		{
@@ -91,9 +91,9 @@ export default function Eventos() {
 			description:
 				'Educação divertida com jogos que desenvolvem raciocínio lógico e habilidades sociais.',
 			features: [
-				'Jogos educativos',
-				'Alinhamento com currículo',
-				'Material didático incluído',
+				'Jogos modernos na educação',
+				'Desenvolvimento de raciocínio lógico e comunicação',
+				'Competições saudáveis',
 			],
 		},
 		{
@@ -102,31 +102,31 @@ export default function Eventos() {
 			description:
 				'Leve diversão e conexão para sua comunidade com nossos jogos de tabuleiro.',
 			features: [
-				'Jogos para grandes grupos',
-				'Acessibilidade',
-				'Atividades inclusivas',
+				'Jogos acessíveis e fáceis',
+				'Brincadeiras e competições saudáveis',
+				'Monitoria para explicação das regras',
 			],
 		},
 	];
 
 	const gameNightBenefits = [
 		{
-			icon: '🎁',
-			title: 'Sorteios Exclusivos',
+			icon: '🏆',
+			title: 'Torneios Empolgantes',
 			description:
-				'Participe de sorteios de jogos de tabuleiro e ganhe prêmios incríveis!',
+				'Competição saudável com campeonatos e desafios para todos os níveis!',
+		},
+		{
+			icon: '🎁',
+			title: 'Sorteios, Brindes e Cupons',
+			description:
+				'Participe de sorteios, receba brindes e cupons de desconto exclusivos!',
 		},
 		{
 			icon: '👥',
 			title: 'Novas Amizades',
 			description:
 				'Conecte-se com outros boardgamers e expanda seu círculo de amigos!',
-		},
-		{
-			icon: '🏆',
-			title: 'Torneios Empolgantes',
-			description:
-				'Competição saudável com campeonatos e desafios para todos os níveis!',
 		},
 		{
 			icon: '🎲',
@@ -300,6 +300,35 @@ export default function Eventos() {
 								</div>
 							))}
 						</div>
+
+						<div className={styles.contactSection}>
+							<div className={styles.contactContent}>
+								<h3>Pronto para criar momentos inesquecíveis?</h3>
+								<p>
+									Seja um evento corporativo, aniversário especial, eventos em
+									escolas, hospitais ou comunitários, estamos prontos para
+									transformar sua ideia em realidade.
+								</p>
+								<div className={styles.contactActions}>
+									<button
+										onClick={() =>
+											openWhatsApp(
+												'Olá! Gostaria de saber mais sobre eventos da Espírito Lúdico.',
+											)
+										}
+										className={styles.primaryButton}
+									>
+										<Image
+											src='/Pino_azul.png'
+											alt='WhatsApp'
+											width={20}
+											height={20}
+										/>
+										Falar sobre Eventos
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -337,35 +366,6 @@ export default function Eventos() {
 						</div>
 					</div>
 				</div> */}
-
-				<div className={styles.contactSection}>
-					<div className={styles.contactContent}>
-						<h3>Pronto para criar momentos inesquecíveis?</h3>
-						<p>
-							Seja um evento corporativo, aniversário especial, eventos em
-							escolas, hospitais ou comunitários, estamos prontos para
-							transformar sua ideia em realidade.
-						</p>
-						<div className={styles.contactActions}>
-							<button
-								onClick={() =>
-									openWhatsApp(
-										'Olá! Gostaria de saber mais sobre eventos da Espírito Lúdico.',
-									)
-								}
-								className={styles.primaryButton}
-							>
-								<Image
-									src='/Pino_azul.png'
-									alt='WhatsApp'
-									width={20}
-									height={20}
-								/>
-								Falar sobre Eventos
-							</button>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 	);
