@@ -92,16 +92,43 @@
 }
 
 .priceTag {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(230, 57, 125, 0.95);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-weight: 600;
+  display: flex;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.pricePeriods {
+  display: flex;
+  gap: 1rem;
+}
+
+.pricePeriod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.period {
+  font-size: 0.75rem;
+  /* color: rgba(255, 255, 255, 0.9); */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price {
   font-size: 0.9rem;
-  backdrop-filter: blur(10px);
+  font-weight: 700;
+  /* color: white; */
+  white-space: nowrap;
 }
 
 .categoryContent {
@@ -172,7 +199,7 @@
 }
 
 .whatsappButton {
-  background: #25D366;
+  background: #38BD6A;
   color: white;
 }
 
@@ -378,8 +405,48 @@
     flex-direction: column;
   }
 
-  .expertHelp {
-    padding: 2rem 1rem;
+  .priceTag {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+  }
+  
+  .period {
+    font-size: 0.65rem;
+  }
+
+  .price {
+    font-size: 0.75rem;
+  }
+
+  .categoryContent {
+    padding: 1rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.2rem;
+  }
+
+  .categoryDescription {
+    font-size: 0.9rem;
+  }
+
+  .gamesList h4 {
+    font-size: 0.9rem;
+  }
+
+  .gameTag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .expertButton {
+    width: 100%;
+  }
+
+  .benefit {
+    padding: 1rem;
   }
 
   .expertIcon {
@@ -387,7 +454,23 @@
     height: 80px;
   }
 
-  .benefit {
-    padding: 1.5rem;
+  .whatsappButton, .rentButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .expertContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .expertIcon {
+    margin: 0;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }
