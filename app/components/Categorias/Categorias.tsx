@@ -11,7 +11,7 @@ export default function Categorias() {
 			title: 'Brisa',
 			description:
 				'Jogos leves, rápidos e descomplicados, perfeitos para um momento descontraído.',
-			image: '/categoria-1.png',
+			image: '/categorias/categoria-1.png',
 			price: {
 				'3 dias': null,
 				'6 dias': 'R$ 10,00',
@@ -32,7 +32,7 @@ export default function Categorias() {
 			title: 'Faísca',
 			description:
 				'Jogos ágeis e envolventes, que despertam a atenção e o raciocínio.',
-			image: '/categoria-2.png',
+			image: '/categorias/categoria-2.png',
 			price: {
 				'3 dias': 'R$ 15,00',
 				'6 dias': 'R$ 20,00',
@@ -54,7 +54,7 @@ export default function Categorias() {
 			title: 'Chama',
 			description:
 				'Jogos que equilibram diversão e desafio, aquecendo a mesa com estratégia e interação.',
-			image: '/categoria-3.png',
+			image: '/categorias/categoria-3.png',
 			price: {
 				'3 dias': 'R$ 25,00',
 				'6 dias': 'R$ 30,00',
@@ -75,7 +75,7 @@ export default function Categorias() {
 			title: 'Fogo',
 			description:
 				'Jogos imersivos, com mais profundidade e tomada de decisões impactantes.',
-			image: '/categoria-4.png',
+			image: '/categorias/categoria-4.png',
 			price: {
 				'3 dias': 'R$ 35,00',
 				'6 dias': 'R$ 40,00',
@@ -96,7 +96,7 @@ export default function Categorias() {
 			title: 'Vulcão',
 			description:
 				'Os grandes desafios, que exigem dedicação e elevam a experiência ao máximo.',
-			image: '/categoria-5.png',
+			image: '/categorias/categoria-5.png',
 			price: {
 				'3 dias': 'R$ 45,00',
 				'6 dias': 'R$ 50,00',

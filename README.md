@@ -40,12 +40,13 @@ app/
 │   ├── ComoFunciona/     # 4 passos do aluguel
 │   ├── PorQueAlugar/     # Benefícios do aluguel
 │   ├── Categorias/       # Categorias de jogos
-│   ├── QuemSomos/       # Sobre a empresa
-│   ├── ComunidadeEventos/ # Comunidade e eventos
+│   ├── Eventos/          # Eventos e encontros
+│   ├── Comunidade/       # Comunidade de boardgamers
+│   ├── QuemSomos/        # Sobre a empresa
 │   └── Footer/           # Rodapé
 ├── globals.css           # Estilos globais
-├── layout.tsx           # Layout principal
-└── page.tsx             # Página inicial
+├── layout.tsx            # Layout principal
+└── page.tsx              # Página inicial
 ```
 
 ## 🎮 Seções do Site

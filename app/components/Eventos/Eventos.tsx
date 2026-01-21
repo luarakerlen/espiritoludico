@@ -77,6 +77,44 @@ export default function Eventos() {
 		},
 	];
 
+	const gameNightBenefits = [
+		{
+			icon: '🏆',
+			title: 'Torneios Empolgantes',
+			description:
+				'Competição saudável com campeonatos e desafios para todos os níveis!',
+		},
+		{
+			icon: '🎁',
+			title: 'Sorteios, Brindes e Cupons',
+			description:
+				'Participe de sorteios, receba brindes e cupons de desconto exclusivos!',
+		},
+		{
+			icon: '👥',
+			title: 'Novas Amizades',
+			description:
+				'Conecte-se com outros boardgamers e expanda seu círculo de amigos!',
+		},
+		{
+			icon: '🎲',
+			title: 'Variedade de Jogos',
+			description:
+				'Experimente dezenas de jogos diferentes, dos clássicos aos lançamentos!',
+		},
+	];
+
+	const eventImages = [
+		'/eventos/1.jpg',
+		'/eventos/2.jpg',
+		'/eventos/3.jpg',
+		'/eventos/4.jpg',
+		'/eventos/5.jpg',
+		'/eventos/6.jpg',
+		'/eventos/7.jpg',
+		'/eventos/8.jpg',
+	];
+
 	const openWhatsApp = (message: string) => {
 		const encodedMessage = encodeURIComponent(message);
 		window.open(
@@ -109,7 +147,71 @@ export default function Eventos() {
 				</div>
 
 				<div className={styles.content}>
-					<div className={styles.gameNightSection}></div>
+					<div className={styles.gameNightSection}>
+						<div className={styles.gameNightContent}>
+							<h3>Nossos eventos de jogos</h3>
+							<p>
+								Participe das nossas noites de jogos e tenha uma experiência
+								memorável!
+							</p>
+
+							<div className={styles.gameNightBenefits}>
+								{gameNightBenefits.map((benefit, index) => (
+									<div key={index} className={styles.benefitCard}>
+										<div className={styles.benefitIcon}>{benefit.icon}</div>
+										<h4>{benefit.title}</h4>
+										<p>{benefit.description}</p>
+									</div>
+								))}
+							</div>
+
+							<div className={styles.gameNightInfo}>
+								<p>
+									Confira nossa <strong> página no Sympla</strong> e
+									<strong> acompanhe nosso Instagram</strong> para não perder os
+									próximos eventos!
+								</p>
+							</div>
+
+							<div className={styles.gameNightActions}>
+								<button
+									onClick={() =>
+										window.open(
+											'https://www.sympla.com.br/produtor/espiritoludico',
+											'_blank',
+										)
+									}
+									className={styles.primaryButton}
+								>
+									Ver Próximos Eventos
+								</button>
+								<button
+									onClick={() =>
+										window.open(
+											'https://www.instagram.com/espiritoludico',
+											'_blank',
+										)
+									}
+									className={styles.secondaryButton}
+								>
+									Seguir no Instagram
+								</button>
+							</div>
+						</div>
+
+						<div className={styles.eventGallery}>
+							{/* {eventImages.map((image, index) => (
+								<div key={index} className={styles.galleryImage}>
+									<img
+										src={image}
+										alt={`Evento ${index + 1}`}
+										width={300}
+										height={200}
+									/>
+								</div>
+							))} */}
+						</div>
+					</div>
 
 					<div className={styles.eventsSection}>
 						<div className={styles.eventsHeader}>
@@ -147,7 +249,7 @@ export default function Eventos() {
 					</div>
 				</div>
 
-				<div className={styles.testimonialSection}>
+				{/* <div className={styles.testimonialSection}>
 					<div className={styles.testimonialCard}>
 						<div className={styles.testimonialContent}>
 							<div className={styles.testimonialHeader}>
@@ -180,15 +282,15 @@ export default function Eventos() {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 
 				<div className={styles.contactSection}>
 					<div className={styles.contactContent}>
 						<h3>Pronto para criar momentos inesquecíveis?</h3>
 						<p>
-							Seja um evento corporativo, aniversário especial ou para entrar na
-							nossa comunidade de jogadores, estamos prontos para transformar
-							sua ideia em realidade.
+							Seja um evento corporativo, aniversário especial, eventos em
+							escolas, hospitais ou comunitários, estamos prontos para
+							transformar sua ideia em realidade.
 						</p>
 						<div className={styles.contactActions}>
 							<button
@@ -200,18 +302,12 @@ export default function Eventos() {
 								className={styles.primaryButton}
 							>
 								<Image
-									src='/Pino_branco.png'
+									src='/Pino_azul.png'
 									alt='WhatsApp'
 									width={20}
 									height={20}
 								/>
 								Falar sobre Eventos
-							</button>
-							<button
-								onClick={joinCommunity}
-								className={styles.secondaryButton}
-							>
-								Entrar na Comunidade
 							</button>
 						</div>
 					</div>
