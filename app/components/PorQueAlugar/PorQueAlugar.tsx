@@ -122,7 +122,7 @@ export default function PorQueAlugar() {
 									</div>
 									<div className={styles.price}>
 										<span className={styles.currency}>R$</span>
-										<span className={styles.amount}>10-55</span>
+										<span className={styles.amount}>10 - 55</span>
 										<span className={styles.period}>pelos mesmos jogos</span>
 									</div>
 									<div className={styles.pros}>

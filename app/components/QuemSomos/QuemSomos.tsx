@@ -1,11 +1,11 @@
 "use client";
 
+import { phoneNumber } from "../../helpers/consts";
 import Image from "next/image";
 import styles from "./QuemSomos.module.css";
 
 export default function QuemSomos() {
   const openWhatsApp = (message: string = "Olá! Gostaria de conhecer mais sobre a Espírito Lúdico.") => {
-    const phoneNumber = "5527999999999"; // Substituir com número real
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };

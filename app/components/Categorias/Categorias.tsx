@@ -231,7 +231,7 @@ export default function Categorias() {
 								src='/Pino_azul.png'
 								alt='Especialista'
 								width={60}
-								height={60}
+								height={70}
 							/>
 						</div>
 						<div className={styles.expertText}>
@@ -264,17 +264,20 @@ export default function Categorias() {
 					<div className={styles.benefit}>
 						<span className={styles.benefitIcon}>🎯</span>
 						<h4>Indicações Personalizadas</h4>
-						<p>Recomendamos jogos baseados no seu perfil e histórico</p>
+						<p>Recomendamos jogos baseados no seu perfil e histórico.</p>
 					</div>
 					<div className={styles.benefit}>
-						<span className={styles.benefitIcon}>📚</span>
-						<h4>Regras Explicadas</h4>
-						<p>Ajuda para entender as regras de qualquer jogo</p>
+						<span className={styles.benefitIcon}>📱</span>
+						<h4>Reserve online</h4>
+						<p>
+							Retire ou receba no mesmo dia ou garanta o jogo desejado para
+							outras datas.
+						</p>
 					</div>
 					<div className={styles.benefit}>
 						<span className={styles.benefitIcon}>🔄</span>
-						<h4>Troca Facilitada</h4>
-						<p>Não gostou? Podemos trocar por outro jogo</p>
+						<h4>Renovação Facilitada</h4>
+						<p>Gostou do jogo? Renove-o facilmente e continue a diversão!</p>
 					</div>
 				</div>
 			</div>
