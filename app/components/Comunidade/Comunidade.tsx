@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import styles from "./ComunidadeEventos.module.css";
+import styles from "./Comunidade.module.css";
 import { phoneNumber } from "../../helpers/consts";
 
-export default function ComunidadeEventos() {
+export default function Comunidade() {
   const eventTypes = [
     {
       icon: "🎂",
@@ -69,7 +69,7 @@ export default function ComunidadeEventos() {
   };
 
   return (
-    <section id="eventos" className={styles.comunidadeEventos}>
+    <section id="comunidade" className={styles.comunidadeEventos}>
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>COMUNIDADE E EVENTOS</h2>
@@ -83,10 +83,10 @@ export default function ComunidadeEventos() {
             <div className={styles.communityHeader}>
               <div className={styles.communityIcon}>
                 <Image
-                  src="/Pino_azul.png"
+                  src="/Pino_branco.png"
                   alt="Comunidade"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={35}
                 />
               </div>
               <div>
@@ -181,7 +181,7 @@ export default function ComunidadeEventos() {
             <div className={styles.testimonialContent}>
               <div className={styles.testimonialHeader}>
                 <Image
-                  src="/Pino_rosa.png"
+                  src="/Pino_branco.png"
                   alt="Depoimento"
                   width={40}
                   height={40}

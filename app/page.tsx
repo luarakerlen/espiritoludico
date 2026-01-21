@@ -4,10 +4,11 @@ import ComoFunciona from './components/ComoFunciona/ComoFunciona';
 import PorQueAlugar from './components/PorQueAlugar/PorQueAlugar';
 import Categorias from './components/Categorias/Categorias';
 import QuemSomos from './components/QuemSomos/QuemSomos';
-import ComunidadeEventos from './components/ComunidadeEventos/ComunidadeEventos';
+import Eventos from './components/Eventos/Eventos';
 import Footer from './components/Footer/Footer';
 import styles from './page.module.css';
 import Instagram from './components/Instagram/Instagram';
+import Comunidade from './components/Comunidade/Comunidade';
 
 export default function Home() {
 	return (
@@ -18,7 +19,8 @@ export default function Home() {
 				<ComoFunciona />
 				<PorQueAlugar />
 				<Categorias />
-				<ComunidadeEventos />
+				<Eventos />
+				<Comunidade />
 				<QuemSomos />
 				{/* <Instagram /> */}
 			</main>
