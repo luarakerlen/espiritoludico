@@ -96,7 +96,7 @@ export default function PorQueAlugar() {
 							<div className={styles.comparison}>
 								<div className={styles.buyOption}>
 									<div className={styles.optionHeader}>
-										<span className={styles.optionIcon}>🛒</span>
+										{/* <span className={styles.optionIcon}>🛒</span> */}
 										<span className={styles.optionTitle}>Comprar</span>
 									</div>
 									<div className={styles.price}>
@@ -117,7 +117,7 @@ export default function PorQueAlugar() {
 
 								<div className={styles.rentOption}>
 									<div className={styles.optionHeader}>
-										<span className={styles.optionIcon}>🎲</span>
+										{/* <span className={styles.optionIcon}>🎲</span> */}
 										<span className={styles.optionTitle}>Alugar</span>
 									</div>
 									<div className={styles.price}>
@@ -149,22 +149,16 @@ export default function PorQueAlugar() {
 							<h4>Pronto para economizar e se divertir?</h4>
 							<p>Fale conosco e descubra o plano perfeito para você!</p>
 							<button
-								onClick={() => openWhatsApp()}
+								onClick={() =>
+									window.open('https://espiritoludico.lends.com.br/', '_blank')
+								}
 								className={styles.ctaButton}
 							>
-								Simular Aluguel
+								Ver Jogos Disponíveis
 							</button>
 						</div>
 					</div>
 				</div>
-
-				{/* <div className={styles.cta}>
-					<h4>Pronto para economizar e se divertir?</h4>
-					<p>Fale conosco e descubra o plano perfeito para você!</p>
-					<button onClick={() => openWhatsApp()} className={styles.ctaButton}>
-						Simular Aluguel
-					</button>
-				</div> */}
 
 				<div className={styles.testimonial}>
 					<div className={styles.testimonialContent}>

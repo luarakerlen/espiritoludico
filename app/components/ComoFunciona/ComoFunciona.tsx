@@ -118,7 +118,7 @@ export default function ComoFunciona() {
 						</div>
 					</div>
 					<div className={styles.benefit}>
-						<span className={styles.benefitIcon}>🎮</span>
+						<span className={styles.benefitIcon}>🎲</span>
 						<div>
 							<h4>Variedade Imensa</h4>
 							<p>Mais de 80 jogos diferentes para escolher</p>

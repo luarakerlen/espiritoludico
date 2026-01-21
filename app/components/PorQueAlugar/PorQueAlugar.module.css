@@ -63,7 +63,8 @@
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.priceComparison h3, .rightContent h3 {
+.priceComparison h3,
+.rightContent h3 {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--foreground);
@@ -81,8 +82,10 @@
 .optionHeader {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 0.5rem;
 	margin-bottom: 1rem;
+	width: 100%;
 }
 
 .optionIcon {
@@ -123,6 +126,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	align-items: center;
 }
 
 .cons span {
@@ -160,6 +164,7 @@
 	padding: 1.5rem;
 	border-radius: 15px;
 	transition: transform 0.3s ease;
+	height: 100%;
 }
 
 .buyOption {
@@ -183,11 +188,12 @@
 	padding: 2rem;
 	text-align: center;
 	color: white;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .cta h4 {
@@ -211,7 +217,7 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 	font-size: 1rem;
-  margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .ctaButton:hover {
@@ -386,12 +392,15 @@
 	}
 
 	.vs {
-		transform: rotate(90deg);
 		margin: 1rem auto;
 	}
 
 	.benefitsGrid {
 		grid-template-columns: 1fr;
+	}
+
+	.ctaButton {
+		margin-top: 0;
 	}
 }
 
