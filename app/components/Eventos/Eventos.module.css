@@ -69,19 +69,20 @@
 .gameNightSection {
 	text-align: center;
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 2rem;
+	border-radius: 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	padding: 2rem;
 }
 
 .gameNightContent {
-	padding: 2rem;
 	background: white;
 	border-radius: 20px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .gameNightContent h3 {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 	color: var(--foreground);
 	margin-bottom: 1rem;
@@ -95,7 +96,7 @@
 
 .gameNightBenefits {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
 	margin: 2rem 0;
 }
@@ -136,24 +137,158 @@
 }
 
 .eventGallery {
-	background-color: red;
+	position: relative;
+	width: 100%;
 }
 
-.galleryImage {
+.carouselContainer {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 16px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.carouselTrack {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	gap: 1rem;
+	padding: 0 1rem;
+}
+
+.carouselSlide {
+	min-width: calc(25% - 0.75rem);
+	opacity: 0.3;
+	transition: all 0.5s ease-in-out;
 	border-radius: 12px;
 	overflow: hidden;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
 }
 
-.galleryImage:hover {
+.carouselSlide.active {
+	opacity: 1;
 	transform: scale(1.05);
 }
 
-.galleryImage img {
+.carouselSlide img {
 	width: 100%;
-	height: 200px;
+	height: 250px;
 	object-fit: cover;
+	display: block;
+}
+
+.carouselButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.9);
+	border: none;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--primary-rose);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carouselButton:hover {
+	background: white;
+	transform: translateY(-50%) scale(1.1);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carouselButton.next {
+	right: 10px;
+}
+
+.carouselButton:not(.next) {
+	left: 10px;
+}
+
+.carouselIndicators {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 8px;
+	z-index: 10;
+}
+
+.indicator {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.indicator:hover {
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.indicator.active {
+	background: white;
+	transform: scale(1.2);
+}
+
+/* Responsive layout */
+@media (min-width: 1200px) {
+	.carouselSlide {
+		min-width: calc(25% - 0.75rem);
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+	.carouselSlide {
+		min-width: calc(33.333% - 0.667rem);
+	}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+	.carouselSlide {
+		min-width: calc(50% - 0.5rem);
+	}
+	
+	.carouselSlide img {
+		height: 200px;
+	}
+}
+
+@media (max-width: 480px) {
+	.carouselSlide {
+		min-width: calc(100% - 1rem);
+	}
+	
+	.carouselSlide img {
+		height: 180px;
+	}
+	
+	.carouselButton {
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+	}
+	
+	.carouselButton.next {
+		right: 5px;
+	}
+	
+	.carouselButton:not(.next) {
+		left: 5px;
+	}
+	
+	.carouselIndicators {
+		bottom: 10px;
+	}
 }
 
 .gameNightInfo {
@@ -161,12 +296,11 @@
 	color: white;
 	padding: 1.5rem;
 	border-radius: 12px;
-	margin: 2rem 0;
 	text-align: center;
 }
 
 .gameNightInfo p {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	margin: 0;
 	color: white;
 }
@@ -176,12 +310,16 @@
 	gap: 1rem;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin-top: 1rem;
 }
 
 .eventsSection {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	border-radius: 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	padding: 2rem;
 }
 
 .eventsHeader {
@@ -415,11 +553,6 @@
 	color: var(--primary-blue);
 }
 
-.gameNightActions .primaryButton {
-	background: var(--primary-blue);
-	color: white;
-}
-
 .secondaryButton {
 	background: transparent;
 	color: white;
@@ -431,15 +564,38 @@
 	color: var(--primary-rose);
 }
 
-.gameNightActions .secondaryButton {
-	background: transparent;
-	color: var(--primary-rose);
-	border: 2px solid var(--primary-rose);
-}
+/* Layout horizontal para mobile e tablet */
+@media (max-width: 768px) {
+	.gameNightBenefits {
+		grid-template-columns: 1fr;
+	}
 
-.gameNightActions .secondaryButton:hover {
-	background: var(--primary-rose);
-	color: white;
+	.gameNightActions {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.carouselSlide img {
+		height: 200px;
+	}
+
+	.carouselButton {
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+	}
+
+	.carouselButton.next {
+		right: 5px;
+	}
+
+	.carouselButton:not(.next) {
+		left: 5px;
+	}
+
+	.carouselIndicators {
+		bottom: 10px;
+	}
 }
 
 @media (max-width: 968px) {
@@ -492,10 +648,6 @@
 	}
 
 	.gameNightBenefits {
-		grid-template-columns: 1fr;
-	}
-
-	.eventGallery {
 		grid-template-columns: 1fr;
 	}
 

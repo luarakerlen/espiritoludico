@@ -1,10 +1,67 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './Eventos.module.css';
 import { phoneNumber } from '../../helpers/consts';
 
 export default function Eventos() {
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [isAutoPlay, setIsAutoPlay] = useState(true);
+
+	const eventImages = [
+		'/eventos/1.jpg',
+		'/eventos/2.jpg',
+		'/eventos/3.jpg',
+		'/eventos/4.jpg',
+		'/eventos/5.jpg',
+		'/eventos/6.jpg',
+		'/eventos/7.jpg',
+		'/eventos/8.jpg',
+	];
+
+	useEffect(() => {
+		if (!isAutoPlay) return;
+
+		const interval = setInterval(() => {
+			setCurrentImageIndex((prevIndex) =>
+				prevIndex === eventImages.length - 1 ? 0 : prevIndex + 1,
+			);
+		}, 4000);
+
+		return () => clearInterval(interval);
+	}, [isAutoPlay, eventImages.length]);
+
+	const goToPrevious = () => {
+		setIsAutoPlay(false);
+		setCurrentImageIndex((prevIndex) =>
+			prevIndex === 0 ? eventImages.length - 1 : prevIndex - 1,
+		);
+	};
+
+	const goToNext = () => {
+		setIsAutoPlay(false);
+		setCurrentImageIndex((prevIndex) =>
+			prevIndex === eventImages.length - 1 ? 0 : prevIndex + 1,
+		);
+	};
+
+	const goToSlide = (index: number) => {
+		setIsAutoPlay(false);
+		setCurrentImageIndex(index);
+	};
+
+	const getVisibleImages = () => {
+		const visible = [];
+		const totalImages = eventImages.length;
+
+		for (let i = 0; i < totalImages; i++) {
+			visible.push(i);
+		}
+
+		return visible;
+	};
+
 	const eventTypes = [
 		{
 			icon: '🎂',
@@ -52,49 +109,24 @@ export default function Eventos() {
 		},
 	];
 
-	const communityBenefits = [
-		{
-			icon: '💬',
-			title: 'Grupo Exclusivo WhatsApp',
-			description:
-				'Tire dúvidas, compartilhe experiências e receba dicas de outros jogadores.',
-		},
-		{
-			icon: '🎮',
-			title: 'Noites de Jogos',
-			description:
-				'Participe de eventos mensais com a comunidade e conheça novos jogos.',
-		},
-		{
-			icon: '🏆',
-			title: 'Torneios e Campeonatos',
-			description: 'Compita com outros jogadores e ganhe prêmios exclusivos.',
-		},
-		{
-			icon: '📚',
-			title: 'Workshops e Treinamentos',
-			description: 'Aprenda estratégias avançadas e regras de jogos complexos.',
-		},
-	];
-
 	const gameNightBenefits = [
 		{
-			icon: '🏆',
-			title: 'Torneios Empolgantes',
-			description:
-				'Competição saudável com campeonatos e desafios para todos os níveis!',
-		},
-		{
 			icon: '🎁',
-			title: 'Sorteios, Brindes e Cupons',
+			title: 'Sorteios Exclusivos',
 			description:
-				'Participe de sorteios, receba brindes e cupons de desconto exclusivos!',
+				'Participe de sorteios de jogos de tabuleiro e ganhe prêmios incríveis!',
 		},
 		{
 			icon: '👥',
 			title: 'Novas Amizades',
 			description:
 				'Conecte-se com outros boardgamers e expanda seu círculo de amigos!',
+		},
+		{
+			icon: '🏆',
+			title: 'Torneios Empolgantes',
+			description:
+				'Competição saudável com campeonatos e desafios para todos os níveis!',
 		},
 		{
 			icon: '🎲',
@@ -104,28 +136,11 @@ export default function Eventos() {
 		},
 	];
 
-	const eventImages = [
-		'/eventos/1.jpg',
-		'/eventos/2.jpg',
-		'/eventos/3.jpg',
-		'/eventos/4.jpg',
-		'/eventos/5.jpg',
-		'/eventos/6.jpg',
-		'/eventos/7.jpg',
-		'/eventos/8.jpg',
-	];
-
 	const openWhatsApp = (message: string) => {
 		const encodedMessage = encodeURIComponent(message);
 		window.open(
 			`https://wa.me/${phoneNumber}?text=${encodedMessage}`,
 			'_blank',
-		);
-	};
-
-	const joinCommunity = () => {
-		openWhatsApp(
-			'Olá! Gostaria de entrar para a comunidade da Espírito Lúdico.',
 		);
 	};
 
@@ -149,7 +164,7 @@ export default function Eventos() {
 				<div className={styles.content}>
 					<div className={styles.gameNightSection}>
 						<div className={styles.gameNightContent}>
-							<h3>Nossos eventos de jogos</h3>
+							<h3>Nossos Eventos de Jogos</h3>
 							<p>
 								Participe das nossas noites de jogos e tenha uma experiência
 								memorável!
@@ -171,45 +186,84 @@ export default function Eventos() {
 									<strong> acompanhe nosso Instagram</strong> para não perder os
 									próximos eventos!
 								</p>
-							</div>
 
-							<div className={styles.gameNightActions}>
-								<button
-									onClick={() =>
-										window.open(
-											'https://www.sympla.com.br/produtor/espiritoludico',
-											'_blank',
-										)
-									}
-									className={styles.primaryButton}
-								>
-									Ver Próximos Eventos
-								</button>
-								<button
-									onClick={() =>
-										window.open(
-											'https://www.instagram.com/espiritoludico',
-											'_blank',
-										)
-									}
-									className={styles.secondaryButton}
-								>
-									Seguir no Instagram
-								</button>
+								<div className={styles.gameNightActions}>
+									<button
+										onClick={() =>
+											window.open(
+												'https://www.sympla.com.br/produtor/espiritoludico',
+												'_blank',
+											)
+										}
+										className={styles.primaryButton}
+									>
+										Ver Próximos Eventos
+									</button>
+									<button
+										onClick={() =>
+											window.open(
+												'https://www.instagram.com/espiritoludico',
+												'_blank',
+											)
+										}
+										className={styles.secondaryButton}
+									>
+										Seguir no Instagram
+									</button>
+								</div>
 							</div>
 						</div>
-
 						<div className={styles.eventGallery}>
-							{/* {eventImages.map((image, index) => (
-								<div key={index} className={styles.galleryImage}>
-									<img
-										src={image}
-										alt={`Evento ${index + 1}`}
-										width={300}
-										height={200}
-									/>
+							<div className={styles.carouselContainer}>
+								<div
+									className={styles.carouselTrack}
+									style={{
+										transform: `translateX(-${currentImageIndex * (100 / getVisibleImages().length)}%)`,
+									}}
+								>
+									{eventImages.map((image, index) => (
+										<div
+											key={index}
+											className={`${styles.carouselSlide} ${index === currentImageIndex ? styles.active : ''}`}
+											onClick={() => goToSlide(index)}
+										>
+											<img
+												src={image}
+												alt={`Evento ${index + 1}`}
+												width={400}
+												height={250}
+											/>
+										</div>
+									))}
 								</div>
-							))} */}
+
+								<button
+									onClick={goToPrevious}
+									className={styles.carouselButton}
+									aria-label='Imagem anterior'
+								>
+									‹
+								</button>
+
+								<button
+									onClick={goToNext}
+									className={`${styles.carouselButton} ${styles.next}`}
+									aria-label='Próxima imagem'
+								>
+									›
+								</button>
+
+								<div className={styles.carouselIndicators}>
+									{eventImages.map((_, index) => (
+										<button
+											key={index}
+											onClick={() => goToSlide(index)}
+											className={`${styles.indicator} ${index === currentImageIndex ? styles.active : ''}`}
+											aria-label={`Ir para imagem ${index + 1}`}
+										/>
+									))}
+								</div>
+							</div>
 						</div>
 					</div>
 
