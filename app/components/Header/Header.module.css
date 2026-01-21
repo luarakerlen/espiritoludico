@@ -41,6 +41,26 @@
   gap: 2rem;
 }
 
+.navOpen {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 0 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navOpen .navLink {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
 .navLink {
   background: none;
   border: none;

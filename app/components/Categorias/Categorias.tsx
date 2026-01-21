@@ -178,6 +178,7 @@ export default function Categorias() {
 									</div>
 								</div>
 
+								<h4>Valor do aluguel:</h4>
 								<div
 									className={styles.priceTag}
 									style={{ borderColor: category.color }}

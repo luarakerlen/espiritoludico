@@ -94,6 +94,7 @@
 .priceTag {
   display: flex;
   padding: 0.75rem 1rem;
+  margin-top: 0.75rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
@@ -116,9 +117,13 @@
   gap: 0.25rem;
 }
 
+.pricePeriod:not(:last-child) {
+  padding-right: 1rem;
+  border-right: 2px solid;
+}
+
 .period {
   font-size: 0.75rem;
-  /* color: rgba(255, 255, 255, 0.9); */
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -127,7 +132,6 @@
 .price {
   font-size: 0.9rem;
   font-weight: 700;
-  /* color: white; */
   white-space: nowrap;
 }
 

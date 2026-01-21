@@ -1,13 +1,17 @@
 'use client';
 
+import { useState } from "react";
 import Image from 'next/image';
 import styles from './Header.module.css';
 import { phoneNumber } from '../../helpers/consts';
 
 export default function Header() {
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 	const scrollToSection = (sectionId: string) => {
 		const element = document.getElementById(sectionId);
 		element?.scrollIntoView({ behavior: 'smooth' });
+		setMobileMenuOpen(false);
 	};
 
 	const openWhatsApp = (
@@ -33,7 +37,7 @@ export default function Header() {
 					/>
 				</div>
 
-				<nav className={styles.nav}>
+				<nav className={`${mobileMenuOpen ? styles.navOpen : styles.nav}`}>
 					<button
 						onClick={() => scrollToSection('como-funciona')}
 						className={styles.navLink}
@@ -90,7 +94,7 @@ export default function Header() {
 					</button>
 				</div>
 
-				<button className={styles.mobileMenuButton}>
+				<button className={styles.mobileMenuButton} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
 					<span></span>
 					<span></span>
 					<span></span>
