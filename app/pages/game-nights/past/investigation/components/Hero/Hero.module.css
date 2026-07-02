@@ -1,0 +1,89 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.backgroundTexture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    url('/artes-investicacao/fundo.png'),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(159, 22, 21, 0.1) 10px,
+      rgba(159, 22, 21, 0.1) 20px
+    ),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.3"/></svg>');
+  background-size: cover, auto, 100px 100px;
+  background-position: center, 0 0, 0 0;
+  background-repeat: no-repeat, repeat, repeat;
+  opacity: 0.9;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.artContainer {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.mainArt {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 0 2px #9F1615,
+    0 0 0 4px #A48666;
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+
+.mainArt:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .buttonsContainer {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mainArt {
+    transform: none;
+  }
+  
+  .mainArt:hover {
+    transform: scale(1.02);
+  }
+}

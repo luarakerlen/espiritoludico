@@ -62,6 +62,29 @@ export default function Eventos() {
 		return visible;
 	};
 
+		const getTransformValue = () => {
+		const gap = 16; // 1rem em pixels
+		const isLargeScreen = typeof window !== 'undefined' && window.innerWidth >= 1200;
+		const isMediumScreen = typeof window !== 'undefined' && window.innerWidth >= 768 && window.innerWidth < 1200;
+		
+		let imageWidth;
+		if (isLargeScreen) {
+			imageWidth = 20; // 20% para 5 imagens
+		} else if (isMediumScreen) {
+			imageWidth = 33.33; // 33.33% para 3 imagens
+		} else {
+			imageWidth = 100; // 100% para 1 imagem
+		}
+		
+		const imageWidthWithGap = imageWidth + (gap / (isLargeScreen ? 5 : isMediumScreen ? 3 : 1));
+		
+		// Calcula para centralizar a imagem atual
+		const centerOffset = currentImageIndex * imageWidthWithGap;
+		const containerWidth = 100; // 100%
+		
+		return -(centerOffset - (containerWidth / 2) + (imageWidthWithGap / 2));
+	};
+
 	const eventTypes = [
 		{
 			icon: '🎂',

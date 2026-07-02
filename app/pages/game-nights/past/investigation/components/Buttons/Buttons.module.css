@@ -1,0 +1,65 @@
+.button {
+	padding: 1rem 2rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'Courier New', monospace;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	min-width: 200px;
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 255, 255, 0.2),
+		transparent
+	);
+	transition: left 0.5s ease;
+}
+
+.button:hover::before {
+	left: 100%;
+}
+
+.symplaButton {
+	background: linear-gradient(135deg, #9f1615, #7a1010);
+	color: white;
+	box-shadow: 0 4px 15px rgba(159, 22, 21, 0.3);
+}
+
+.symplaButton:hover {
+	background: linear-gradient(135deg, #7a1010, #9f1615);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(159, 22, 21, 0.4);
+}
+
+.whatsappButton {
+	background: linear-gradient(135deg, #25d366, #128c7e);
+	color: white;
+	box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsappButton:hover {
+	background: linear-gradient(135deg, #128c7e, #25d366);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+@media (max-width: 768px) {
+	.button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,254 @@
+.eventInfo {
+	position: relative;
+	padding: 5rem 2rem;
+	background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+	overflow: hidden;
+}
+
+.backgroundTexture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #a48666;
+	opacity: 0.1;
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 15px,
+		rgba(159, 22, 21, 0.05) 15px,
+		rgba(159, 22, 21, 0.05) 30px
+	);
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.title {
+	font-family: 'Courier New', monospace;
+	font-size: 2.5rem;
+	color: #9f1615;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 1rem;
+	position: relative;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.decorationLine {
+	width: 200px;
+	height: 3px;
+	background: linear-gradient(90deg, transparent, #9f1615, transparent);
+	margin: 0 auto;
+	position: relative;
+}
+
+.decorationLine::before,
+.decorationLine::after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #9f1615;
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.decorationLine::before {
+	left: -5px;
+}
+
+.decorationLine::after {
+	right: -5px;
+}
+
+.stepsContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.stepCard {
+	position: relative;
+}
+
+.stepCardInner {
+	background: rgba(164, 134, 102, 0.9);
+	border: 2px solid #9f1615;
+	padding: 2rem;
+	position: relative;
+	clip-path: polygon(
+		0 0,
+		calc(100% - 15px) 0,
+		100% 15px,
+		100% 100%,
+		15px 100%,
+		0 calc(100% - 15px)
+	);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+
+	background-image:
+		url('/artes-investicacao/fundo.png'),
+		repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 10px,
+			rgba(159, 22, 21, 0.1) 10px,
+			rgba(159, 22, 21, 0.1) 20px
+		),
+		url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.3"/></svg>');
+	background-size:
+		cover,
+		auto,
+		100px 100px;
+	background-position:
+		center,
+		0 0,
+		0 0;
+	background-repeat: no-repeat, repeat, repeat;
+	opacity: 0.9;
+}
+
+.stepCard:hover .stepCardInner {
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+	transform: translateY(-4px);
+}
+
+.stepCard:hover .stepNumber {
+	transform: translateY(-4px);
+}
+
+.stepNumber {
+	position: absolute;
+	top: -20px;
+	left: 20px;
+	background: #9f1615;
+	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Courier New', monospace;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: 3px solid #a48666;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	z-index: 10;
+	transition: all 0.3s ease;
+}
+
+.stepContent {
+	margin-top: 1rem;
+}
+
+.stepTitle {
+	font-family: 'Courier New', monospace;
+	font-size: 1.3rem;
+	color: #9f1615;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.stepDescription {
+	color: #fff;
+	line-height: 1.6;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.pin {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 30px;
+	height: 30px;
+}
+
+.pinHead {
+	width: 12px;
+	height: 12px;
+	background: #9f1615;
+	border-radius: 50%;
+	border: 2px solid #a48666;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.pinLine {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #9f1615;
+	border-radius: 50%;
+	transform: rotate(-15deg);
+}
+
+.callToAction {
+	text-align: center;
+	padding: 2rem;
+	background: rgba(159, 22, 21, 0.1);
+	border: 2px dashed #9f1615;
+	border-radius: 8px;
+	margin-top: 2rem;
+}
+
+.ctaText {
+	font-family: 'Courier New', monospace;
+	font-size: 1.2rem;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 0;
+	font-weight: 600;
+}
+
+@media (max-width: 768px) {
+	.eventInfo {
+		padding: 3rem 1rem;
+	}
+
+	.title {
+		font-size: 1.8rem;
+	}
+
+	.stepsContainer {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.stepCardInner {
+		padding: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.stepTitle {
+		font-size: 1.1rem;
+	}
+
+	.ctaText {
+		font-size: 1rem;
+	}
+}
