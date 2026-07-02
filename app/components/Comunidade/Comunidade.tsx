@@ -39,19 +39,19 @@ export default function Comunidade() {
       description: "Tire dúvidas, compartilhe experiências e receba dicas de outros jogadores."
     },
     {
-      icon: "🎮",
-      title: "Noites de Jogos",
-      description: "Participe de eventos mensais com a comunidade e conheça novos jogos."
+      icon: "🎁",
+      title: "Promoções exclusivas",
+      description: "Receba promoções exclusivas para aluguéis e eventos da Espírito Lúdico."
     },
     {
-      icon: "🏆",
-      title: "Torneios e Campeonatos",
-      description: "Compita com outros jogadores e ganhe prêmios exclusivos."
+      icon: "🎲",
+      title: "Escolha de jogos",
+      description: "Participe de votações para escolher novos jogos do nosso acervo."
     },
     {
-      icon: "📚",
-      title: "Workshops e Treinamentos",
-      description: "Aprenda estratégias avançadas e regras de jogos complexos."
+      icon: "🎥",
+      title: "Spoilers e novidades",
+      description: "Receba spoilers e novidades em primeira mão sobre os jogos que serão disponibilizados para aluguéis."
     }
   ];
 
@@ -72,9 +72,9 @@ export default function Comunidade() {
     <section id="comunidade" className={styles.comunidadeEventos}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>COMUNIDADE E EVENTOS</h2>
+          <h2 className={styles.title}>COMUNIDADE</h2>
           <p className={styles.subtitle}>
-            Além do aluguel, criamos experiências memoráveis através de eventos e uma comunidade vibrante
+            Faça parte da nossa comunidade, conecte-se com outros jogadores e aproveite os benefícios exclusivos.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function Comunidade() {
 
             <div className={styles.communityBenefits}>
               {communityBenefits.map((benefit, index) => (
-                <div 
+                <div
                   key={index}
                   className={styles.benefitCard}
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -110,22 +110,7 @@ export default function Comunidade() {
             </div>
 
             <div className={styles.communityCta}>
-              <div className={styles.communityStats}>
-                <div className={styles.stat}>
-                  <span className={styles.statNumber}>200+</span>
-                  <span className={styles.statLabel}>Membros Ativos</span>
-                </div>
-                <div className={styles.stat}>
-                  <span className={styles.statNumber}>15+</span>
-                  <span className={styles.statLabel}>Eventos/Mês</span>
-                </div>
-                <div className={styles.stat}>
-                  <span className={styles.statNumber}>4.9</span>
-                  <span className={styles.statLabel}>Avaliação</span>
-                </div>
-              </div>
-              
-              <button 
+              <button
                 onClick={joinCommunity}
                 className={styles.communityButton}
               >
@@ -137,102 +122,8 @@ export default function Comunidade() {
                 />
                 Entrar na Comunidade
               </button>
-            </div>
-          </div>
-
-          <div className={styles.eventsSection}>
-            <div className={styles.eventsHeader}>
-              <h3>Eventos Corporativos e Sociais</h3>
-              <p>
-                Trabalhamos com eventos diversos: aniversários, confraternização de empresas, 
-                eventos em escolas, comunidades, etc.
-              </p>
-            </div>
-
-            <div className={styles.eventTypes}>
-              {eventTypes.map((eventType, index) => (
-                <div 
-                  key={index}
-                  className={styles.eventCard}
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  <div className={styles.eventIcon}>{eventType.icon}</div>
-                  <h4>{eventType.title}</h4>
-                  <p>{eventType.description}</p>
-                  <ul className={styles.eventFeatures}>
-                    {eventType.features.map((feature, featureIndex) => (
-                      <li key={featureIndex}>{feature}</li>
-                    ))}
-                  </ul>
-                  <button 
-                    onClick={() => requestEvent(eventType.title)}
-                    className={styles.eventButton}
-                  >
-                    Solicitar Orçamento
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.testimonialSection}>
-          <div className={styles.testimonialCard}>
-            <div className={styles.testimonialContent}>
-              <div className={styles.testimonialHeader}>
-                <Image
-                  src="/Pino_branco.png"
-                  alt="Depoimento"
-                  width={40}
-                  height={40}
-                />
-                <div>
-                  <h5>Evento Incrível!</h5>
-                  <div className={styles.rating}>
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className={styles.star}>⭐</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p>
-                "Contratamos a Espírito Lúdico para a confraternização da empresa e foi 
-                sensacional! Os jogos selecionados foram perfeitos para quebrar o gelo e 
-                promover trabalho em equipe. Todos os funcionários amaram!"
-              </p>
-              <div className={styles.testimonialAuthor}>
-                <strong>João Santos</strong>
-                <span>Gerente de RH - Tech Company</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.contactSection}>
-          <div className={styles.contactContent}>
-            <h3>Pronto para criar momentos inesquecíveis?</h3>
-            <p>
-              Seja um evento corporativo, aniversário especial ou para entrar na nossa 
-              comunidade de jogadores, estamos prontos para transformar sua ideia em realidade.
-            </p>
-            <div className={styles.contactActions}>
-              <button 
-                onClick={() => openWhatsApp("Olá! Gostaria de saber mais sobre eventos da Espírito Lúdico.")}
-                className={styles.primaryButton}
-              >
-                <Image
-                  src="/Pino_branco.png"
-                  alt="WhatsApp"
-                  width={20}
-                  height={20}
-                />
-                Falar sobre Eventos
-              </button>
-              <button 
-                onClick={joinCommunity}
-                className={styles.secondaryButton}
-              >
-                Entrar na Comunidade
+              <button>
+                Seguir noInstagram
               </button>
             </div>
           </div>
