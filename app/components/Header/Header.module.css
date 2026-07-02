@@ -151,6 +151,162 @@
   transition: all 0.3s ease;
 }
 
+.eventosNav {
+  position: relative;
+}
+
+.eventosDesktop {
+  display: block;
+}
+
+.eventosMobile {
+  display: none;
+}
+
+.eventosTrigger::after {
+  display: none;
+}
+
+.eventosNav:hover .eventosTrigger,
+.eventosNav:focus-within .eventosTrigger {
+  color: var(--primary-rose);
+}
+
+.eventosDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 1001;
+}
+
+.eventosNav:hover .eventosDropdown,
+.eventosNav:focus-within .eventosDropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.eventosDropdownItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  background: none;
+  border: none;
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.eventosDropdownItem:hover,
+.eventosSubmenu:hover > .eventosDropdownItem {
+  background: rgba(230, 57, 125, 0.08);
+  color: var(--primary-rose);
+}
+
+.eventosSubmenu {
+  position: relative;
+}
+
+.submenuArrow {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.eventosFlyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 180px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+.eventosSubmenu:hover .eventosFlyout,
+.eventosSubmenu:focus-within .eventosFlyout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.eventosFlyoutLink {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: var(--foreground);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.eventosFlyoutLink:hover {
+  background: rgba(230, 57, 125, 0.08);
+  color: var(--primary-rose);
+}
+
+.eventosEmpty {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #999;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.eventosAccordionTrigger,
+.eventosAccordionSubTrigger {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.eventosAccordionItem,
+.eventosAccordionLink {
+  display: block;
+  width: 100%;
+}
+
+.eventosAccordionSubContent {
+  width: 100%;
+}
+
+.eventosAccordionItem:hover,
+.eventosAccordionTrigger:hover,
+.eventosAccordionSubTrigger:hover,
+.eventosAccordionLink:hover {
+  color: var(--primary-rose);
+}
+
+.chevron {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 1200px) {
   .nav {
     gap: 1rem;
@@ -177,6 +333,57 @@
   .logoImage {
     max-width: 150px;
     height: auto;
+  }
+
+  .eventosDesktop {
+    display: none;
+  }
+
+  .eventosMobile {
+    display: block;
+    width: 100%;
+  }
+
+  .navOpen .eventosNav {
+    width: 100%;
+  }
+
+  .navOpen .eventosAccordionTrigger,
+  .navOpen .eventosAccordionItem,
+  .navOpen .eventosAccordionSubTrigger,
+  .navOpen .eventosAccordionLink {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .navOpen .eventosAccordionTrigger .chevron,
+  .navOpen .eventosAccordionSubTrigger .chevron {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navOpen .eventosAccordionTrigger .chevronOpen,
+  .navOpen .eventosAccordionSubTrigger .chevronOpen {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .navOpen .eventosAccordionLink {
+    text-decoration: none;
+  }
+
+  .navOpen .eventosEmpty {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+    color: #999;
+    font-style: italic;
+    font-weight: 500;
   }
 }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -52,6 +53,9 @@ const Header = () => {
 					>
 						Ingressos
 					</button>
+					<Link href='/' className={styles.navLink}>
+						Página Inicial
+					</Link>
 				</nav>
 			</div>
 		</header>

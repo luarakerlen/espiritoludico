@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from 'next/image';
 import styles from './Header.module.css';
+import EventosNav from './EventosNav';
 import { phoneNumber } from '../../helpers/consts';
 
 export default function Header() {
@@ -56,12 +57,10 @@ export default function Header() {
 					>
 						Jogos
 					</button>
-					<button
-						onClick={() => scrollToSection('eventos')}
-						className={styles.navLink}
-					>
-						Eventos
-					</button>
+					<EventosNav
+						onScrollToEventos={() => scrollToSection('eventos')}
+						onCloseMobileMenu={() => setMobileMenuOpen(false)}
+					/>
 					<button
 						onClick={() => scrollToSection('comunidade')}
 						className={styles.navLink}
