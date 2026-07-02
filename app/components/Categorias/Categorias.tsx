@@ -209,7 +209,7 @@ export default function Categorias() {
 										className={styles.whatsappButton}
 									>
 										<Image
-											src='/Pino_branco.png'
+											src='/logos/Pino_branco.png'
 											alt='WhatsApp'
 											width={16}
 											height={16}
@@ -229,7 +229,7 @@ export default function Categorias() {
 					<div className={styles.expertContent}>
 						<div className={styles.expertIcon}>
 							<Image
-								src='/Pino_azul.png'
+								src='/logos/Pino_azul.png'
 								alt='Especialista'
 								width={60}
 								height={70}

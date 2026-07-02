@@ -123,7 +123,7 @@ export default function Hero() {
 						className={`${styles.button} ${styles.primaryButton}`}
 					>
 						<Image
-							src='/Pino_branco.png'
+							src='/logos/Pino_branco.png'
 							alt='WhatsApp'
 							width={20}
 							height={20}

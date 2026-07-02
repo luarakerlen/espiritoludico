@@ -50,7 +50,7 @@ export default function QuemSomos() {
               <div className={styles.imageOverlay}>
                 <div className={styles.founderBadge}>
                   <Image
-                    src="/Pino_rosa.png"
+                    src="/logos/Pino_rosa.png"
                     alt="Espírito Lúdico"
                     width={30}
                     height={30}
@@ -104,7 +104,7 @@ export default function QuemSomos() {
                 className={styles.ctaButton}
               >
                 <Image
-                  src="/Pino_branco.png"
+                  src="/logos/Pino_branco.png"
                   alt="WhatsApp"
                   width={20}
                   height={20}
@@ -152,7 +152,7 @@ export default function QuemSomos() {
             </div>
             <div className={styles.differentialImage}>
               <Image
-                src="/Fundo_azul_aluguel.png"
+                src="/logos/Fundo_azul_aluguel.png"
                 alt="Espírito Lúdico - Jogos de Tabuleiro"
                 fill
                 className={styles.differentialImg}

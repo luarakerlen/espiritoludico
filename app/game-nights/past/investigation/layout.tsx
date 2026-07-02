@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 			'Uma noite de mistério e investigação. Reúna sua equipe e venha desvendar este caso! 7 de fevereiro, 18h30.',
 		images: [
 			{
-				url: '/artes-investicacao/arte-principal.png',
+				url: '/paginas-eventos/investicacao/arte-principal.png',
 				width: 1200,
 				height: 630,
 				alt: 'Espírito Lúdico Game Night - Investigação',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 		title: 'Espírito Lúdico Game Night - Investigação',
 		description:
 			'Uma noite de mistério e investigação. Reúna sua equipe e venha desvendar este caso!',
-		images: ['/artes-investicacao/arte-principal.png'],
+		images: ['/paginas-eventos/investicacao/arte-principal.png'],
 	},
 };
 

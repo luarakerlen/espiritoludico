@@ -28,7 +28,7 @@ const Header = () => {
 			<div className={styles.container}>
 				<div className={styles.logo}>
 					<img
-						src='/logo/logo_comprida_branca.png'
+						src='/logos/logo_comprida_branca.png'
 						alt='Espírito Lúdico'
 						className={styles.logoImg}
 					/>

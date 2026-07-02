@@ -319,7 +319,7 @@ export default function Eventos() {
 										className={styles.primaryButton}
 									>
 										<Image
-											src='/Pino_azul.png'
+											src='/logos/Pino_azul.png'
 											alt='WhatsApp'
 											width={20}
 											height={20}
@@ -337,7 +337,7 @@ export default function Eventos() {
 						<div className={styles.testimonialContent}>
 							<div className={styles.testimonialHeader}>
 								<Image
-									src='/Pino_branco.png'
+									src='/logos/Pino_branco.png'
 									alt='Depoimento'
 									width={40}
 									height={40}

@@ -85,7 +85,7 @@ export default function Comunidade() {
 					<div className={styles.ctaContainer}>
 						<button onClick={joinCommunity} className={styles.secondaryButton}>
 							<Image
-								src='/Pino_branco.png'
+								src='/logos/Pino_branco.png'
 								alt='WhatsApp'
 								width={20}
 								height={20}

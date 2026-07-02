@@ -30,7 +30,7 @@ export default function Header() {
 			<div className={styles.container}>
 				<div className={styles.logo}>
 					<Image
-						src='/logo_comprida_rosa.png'
+						src='/logos/logo_comprida_rosa.png'
 						alt='Espírito Lúdico Logo'
 						width={180}
 						height={40}
@@ -88,7 +88,7 @@ export default function Header() {
 						}
 						className={`${styles.button} ${styles.rentButton}`}
 					>
-						<img src='/Pino_branco.png' alt='WhatsApp' width={20} height={20} />
+						<img src='/logos/Pino_branco.png' alt='WhatsApp' width={20} height={20} />
 						Alugar Jogos
 					</button>
 				</div>

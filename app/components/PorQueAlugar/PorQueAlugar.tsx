@@ -136,15 +136,6 @@ export default function PorQueAlugar() {
 					</div>
 
 					<div className={styles.rightContent}>
-						{/* <h3>Valores de compra 😫</h3>
-						<div className={styles.imageContainer}>
-							<Image
-								src='/jogos-caros2.png'
-								alt='Comparação de preços de jogos de tabuleiro'
-								fill
-								className={styles.mainImage}
-							/>
-						</div> */}
 						<div className={styles.cta}>
 							<h4>Pronto para economizar e se divertir?</h4>
 							<p>Fale conosco e descubra o plano perfeito para você!</p>

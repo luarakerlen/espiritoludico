@@ -13,7 +13,7 @@ const Hero = () => {
 			<div className={styles.container}>
 				<div className={styles.artContainer}>
 					<Image
-						src='/artes-investicacao/arte-principal.png'
+						src='/paginas-eventos/investicacao/arte-principal.png'
 						alt='Espírito Lúdico Game Night - Investigação'
 						width={800}
 						height={600}

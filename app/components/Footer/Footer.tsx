@@ -35,7 +35,7 @@ export default function Footer() {
 					<div className={styles.about}>
 						<div className={styles.logo}>
 							<Image
-								src='/Pino_rosa.png'
+								src='/logos/Pino_rosa.png'
 								alt='Espírito Lúdico'
 								width={40}
 								height={40}
@@ -81,7 +81,7 @@ export default function Footer() {
 								aria-label='Acervo'
 							>
 								<Image
-									src='/Pino_branco.png'
+									src='/logos/Pino_branco.png'
 									alt='Acervo'
 									width={20}
 									height={20}
@@ -222,7 +222,7 @@ export default function Footer() {
 								className={styles.primaryButton}
 							>
 								<Image
-									src='/Pino_branco.png'
+									src='/logos/Pino_branco.png'
 									alt='WhatsApp'
 									width={20}
 									height={20}
