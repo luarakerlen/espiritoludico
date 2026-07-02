@@ -53,7 +53,7 @@ export default function Footer() {
 								aria-label='WhatsApp'
 							>
 								<Image
-									src='/Pino_branco.png'
+									src='/whatsapp-white-icon.png'
 									alt='WhatsApp'
 									width={20}
 									height={20}
@@ -66,16 +66,26 @@ export default function Footer() {
 									window.open('https://instagram.com/espiritoludico', '_blank')
 								}
 							>
-								<span>📷</span>
+								<Image
+									src='/instagram-white-icon.webp'
+									alt='Instagram'
+									width={20}
+									height={20}
+								/>
 							</button>
 							<button
-								className={styles.socialButton}
-								aria-label='Facebook'
 								onClick={() =>
-									window.open('https://facebook.com/espiritoludico', '_blank')
+									window.open('https://espiritoludico.lends.com.br/', '_blank')
 								}
+								className={styles.socialButton}
+								aria-label='Acervo'
 							>
-								<span>📘</span>
+								<Image
+									src='/Pino_branco.png'
+									alt='Acervo'
+									width={20}
+									height={20}
+								/>
 							</button>
 						</div>
 					</div>

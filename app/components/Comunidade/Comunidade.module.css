@@ -43,66 +43,26 @@
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
   margin-bottom: 4rem;
 }
 
-.communitySection {
-  background: white;
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  height: fit-content;
-}
-
-.communityHeader {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 2px solid var(--border-light);
-}
-
-.communityIcon {
-  background: var(--primary-blue);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.communityHeader h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--foreground);
-  margin-bottom: 0.25rem;
-}
-
-.communityHeader p {
-  color: var(--text-light);
-  font-size: 0.95rem;
-}
-
-.communityBenefits {
+.benefitsGrid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .benefitCard {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 12px;
-  background: #f8f9fa;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid var(--border-light);
   transition: all 0.3s ease;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
@@ -120,17 +80,19 @@
 }
 
 .benefitCard:hover {
-  background: linear-gradient(135deg, rgba(230, 57, 125, 0.1), rgba(0, 95, 153, 0.1));
-  transform: translateX(5px);
+  background: linear-gradient(135deg, rgba(230, 57, 125, 0.08), rgba(0, 95, 153, 0.08));
+  border-color: var(--primary-rose);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .benefitIcon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .benefitCard h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--foreground);
   margin-bottom: 0.25rem;
@@ -138,8 +100,8 @@
 
 .benefitCard p {
   color: var(--text-light);
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .communityStats {
@@ -169,27 +131,56 @@
   opacity: 0.9;
 }
 
-.communityButton {
-  width: 100%;
+.ctaContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   background: var(--primary-rose);
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
 }
 
-.communityButton:hover {
+.primaryButton:hover {
   background: #d91f6b;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(230, 57, 125, 0.3);
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--primary-blue);
+  color: white;
+  padding: 1rem 2rem;
+  border: 2px solid var(--primary-blue);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.secondaryButton:hover {
+  background: #005f99;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 95, 153, 0.2);
 }
 
 .eventsSection {
@@ -413,41 +404,9 @@
   font-size: 1rem;
 }
 
-.primaryButton {
-  background: white;
-  color: var(--primary-blue);
-}
-
-.primaryButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.secondaryButton {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.secondaryButton:hover {
-  background: white;
-  color: var(--primary-rose);
-  transform: translateY(-3px);
-}
-
 @media (max-width: 968px) {
-  .content {
+  .benefitsGrid {
     grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .eventTypes {
-    grid-template-columns: 1fr;
-  }
-
-  .communityStats {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
   }
 }
 
@@ -464,8 +423,20 @@
     font-size: 1.1rem;
   }
 
-  .communitySection {
-    padding: 2rem;
+  .heroSection {
+    padding: 2rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .benefitsGrid {
+    gap: 1rem;
   }
 
   .testimonialCard {
@@ -498,13 +469,32 @@
     font-size: 1.75rem;
   }
 
-  .communitySection {
-    padding: 1.5rem;
+  .heroSection {
+    padding: 1.5rem 1rem;
   }
 
-  .communityHeader {
+  .heroIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .heroTitle {
+    font-size: 1.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .ctaContainer {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 280px;
   }
 
   .eventCard {
