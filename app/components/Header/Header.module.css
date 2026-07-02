@@ -371,6 +371,11 @@
     transform: translateY(-50%) rotate(180deg);
   }
 
+  .navOpen .eventosAccordionItem,
+  .navOpen .eventosAccordionSubTrigger {
+    font-weight: 700;
+  }
+
   .navOpen .eventosAccordionLink {
     text-decoration: none;
   }
