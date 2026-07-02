@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import GoogleAnalytics from '../../../pages/game-nights/past/investigation/components/GoogleAnalytics/GoogleAnalytics';
-import '../../../pages/game-nights/past/investigation/globals.css';
+import GoogleAnalytics from './components/GoogleAnalytics/GoogleAnalytics';
+import './globals.css';
 
 export const metadata: Metadata = {
 	title: 'Espírito Lúdico Game Night - Investigação',
