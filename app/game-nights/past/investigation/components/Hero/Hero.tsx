@@ -1,6 +1,6 @@
 'use client';
 
-import { SymplaButton, WhatsappButton } from '../Buttons/Buttons';
+import { SymplaButton, WhatsappButton } from '../../../../../components/ui';
 import Image from 'next/image';
 import Countdown from '../Countdown/Countdown';
 import styles from './Hero.module.css';
@@ -23,8 +23,14 @@ const Hero = () => {
 				</div>
 
 				<div className={styles.buttonsContainer}>
-					<SymplaButton label={AnalyticsLabel.BOTAO_SYMPLA_HERO} />
-					<WhatsappButton label={AnalyticsLabel.BOTAO_WHATSAPP_HERO} />
+					<SymplaButton
+						label={AnalyticsLabel.BOTAO_SYMPLA_HERO}
+						variant='investigation'
+					/>
+					<WhatsappButton
+						label={AnalyticsLabel.BOTAO_WHATSAPP_HERO}
+						variant='investigation'
+					/>
 				</div>
 
 				<Countdown />

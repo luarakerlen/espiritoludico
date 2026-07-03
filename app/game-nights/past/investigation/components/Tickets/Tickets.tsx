@@ -1,7 +1,7 @@
 'use client';
 
 import { AnalyticsLabel } from '../../lib/analytics/labels';
-import { SymplaButton, WhatsappButton } from '../Buttons/Buttons';
+import { SymplaButton, WhatsappButton } from '../../../../../components/ui';
 import styles from './Tickets.module.css';
 
 const Tickets = () => {
@@ -157,10 +157,12 @@ const Tickets = () => {
 								<div className={styles.ticketButtons}>
 									<SymplaButton
 										label={`${AnalyticsLabel.BOTAO_SYMPLA}_${ticket.type.toLowerCase()}`}
+										variant='investigation'
 									/>
 									<WhatsappButton
 										label={`${AnalyticsLabel.BOTAO_WHATSAPP}_${ticket.type.toLowerCase()}`}
 										ticketType={ticket.type}
+										variant='investigation'
 									/>
 								</div>
 							</div>
