@@ -1,6 +1,6 @@
 'use client';
 
-import { SymplaButton, WhatsappButton } from '../Buttons/Buttons';
+import { SymplaButton, WhatsappButton } from '../../../../../components/ui';
 import styles from './Tickets.module.css';
 
 const Tickets = () => {

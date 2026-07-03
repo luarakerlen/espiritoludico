@@ -6,6 +6,7 @@ import styles from './Header.module.css';
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -21,6 +22,11 @@ const Header = () => {
 		if (element) {
 			element.scrollIntoView({ behavior: 'smooth' });
 		}
+		setIsMobileMenuOpen(false);
+	};
+
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(!isMobileMenuOpen);
 	};
 
 	return (
@@ -34,7 +40,18 @@ const Header = () => {
 					/>
 				</div>
 
-				<nav className={styles.nav}>
+				<button
+					className={styles.hamburger}
+					onClick={toggleMobileMenu}
+					aria-label='Menu'
+					aria-expanded={isMobileMenuOpen}
+				>
+					<span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+					<span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+					<span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+				</button>
+
+				<nav className={`${styles.nav} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
 					<button
 						onClick={() => scrollToSection('event-info')}
 						className={styles.navLink}
@@ -53,7 +70,7 @@ const Header = () => {
 					>
 						Ingressos
 					</button>
-					<Link href='/' className={styles.navLink}>
+					<Link href='/' className={styles.navLink} onClick={() => setIsMobileMenuOpen(false)}>
 						Página Inicial
 					</Link>
 				</nav>
