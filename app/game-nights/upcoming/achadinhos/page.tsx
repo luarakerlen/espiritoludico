@@ -3,6 +3,7 @@ import AnalyticsTracker from './components/AnalyticsTracker/AnalyticsTracker';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import EventInfo from './components/EventInfo/EventInfo';
+import Games from './components/Games/Games';
 import Tickets from './components/Tickets/Tickets';
 import FAQ from './components/FAQ/FAQ';
 import CookieBanner from './components/CookieBanner/CookieBanner';
@@ -23,6 +24,7 @@ export default function AchadinhosPage() {
 				<Header />
 				<Hero />
 				<EventInfo />
+				<Games />
 				<Tickets />
 				<FAQ />
 				<CookieBanner />
