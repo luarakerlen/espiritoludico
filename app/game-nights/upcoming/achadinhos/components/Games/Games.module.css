@@ -65,12 +65,13 @@
 	width: 100%;
 	height: 250px;
 	overflow: hidden;
+	padding: 1rem;
 }
 
 .gameArt {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	transition: transform 0.3s ease;
 }
 
@@ -154,7 +155,7 @@
 	}
 
 	.gameImage {
-		height: 200px;
+		height: 250px;
 	}
 
 	.gameName {

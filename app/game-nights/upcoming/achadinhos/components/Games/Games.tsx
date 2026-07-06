@@ -14,28 +14,30 @@ interface Game {
 
 const games: Game[] = [
 	{
-		name: 'Alien Ninjas',
-		description: 'Um jogo de dedução social onde ninjas alienígenas tentam se infiltrar na Terra sem serem descobertos. Com mecânicas únicas de bluff e estratégia.',
-		players: '3-6 jogadores',
-		duration: '20-30 minutos',
-		image: '/jogos/alieninjas.jpg',
-		ludopediaUrl: 'https://ludopedia.com.br/jogo/alien-ninjas',
+		name: `Os Desejos do Sultão`,
+		description:
+			'Os Desejos do Sultão é um jogo fácil, divertido e estratégico, onde os jogadores são encarregados de realizar os Desejos do Sultão, baixando cartas no tabuleiro ou aplicando os seus efeitos.',
+		players: '1-4 jogadores',
+		duration: '60 minutos',
+		image: '/jogos/os-desejos-do-sultao2.png',
+		ludopediaUrl: 'https://ludopedia.com.br/jogo/os-desejos-do-sultao',
 	},
 	{
 		name: 'Lhama',
-		description: 'Um jogo divertido e caótico onde você precisa gerenciar seu rebanho de lhamas enquanto evita desastres hilários. Perfeito para grupos que querem risadas garantidas.',
-		players: '2-5 jogadores',
-		duration: '30-45 minutos',
-		image: '/jogos/lhama.jpeg',
-		ludopediaUrl: 'https://ludopedia.com.br/jogo/lhama',
+		description:
+			'Você consegue derrotar a LHAMA? Tente se livrar de todas as suas cartas para não receber nenhuma ficha. Um jogo para toda família e todas as idades. Não importa se você é iniciante ou veterano nos jogos, LHAMA é rápido, divertido e viciante!',
+		players: '2-6 jogadores',
+		duration: '20 minutos',
+		image: '/jogos/lhama2.png',
+		ludopediaUrl: 'https://ludopedia.com.br/jogo/-l-l-a-m-a',
 	},
 	{
-		name: `Os Desejos do Sultão`,
-		description: 'Um jogo de negociação e engenharia onde você compete para construir o palácio mais magnífico para o Sultão. Combine estratégia com diplomacia.',
-		players: '3-5 jogadores',
-		duration: '45-60 minutos',
-		image: '/jogos/os-desejos-do-sultao.jpg',
-		ludopediaUrl: 'https://ludopedia.com.br/jogo/os-desejos-do-sultao',
+		name: 'Alieninjas',
+		description: 'Alieninjas traz 5 jogos únicos em uma única caixa, nos quais serão testados sua agilidade, memória e raciocínio, promovendo o vencedor ao cargo de comandante da instituição.',
+		players: '2-6 jogadores',
+		duration: '30 minutos',
+		image: '/jogos/alieninjas2.jpg',
+		ludopediaUrl: 'https://ludopedia.com.br/jogo/alieninjas',
 	},
 ];
 
@@ -44,10 +46,11 @@ const Games = () => {
 		<section id='games' className={styles.games}>
 			<div className={styles.container}>
 				<div className={styles.header}>
-					<h2 className={styles.title}>🎮 Achadinhos do Evento</h2>
+					<h2 className={styles.title}>Achadinhos do Evento</h2>
 					<div className={styles.decorationLine}></div>
 					<p className={styles.subtitle}>
-						Conheça alguns dos jogos incríveis que você vai descobrir no nosso Game Night
+						Conheça alguns dos jogos incríveis que você vai descobrir na nossa
+						Game Night
 					</p>
 				</div>
 
@@ -66,7 +69,7 @@ const Games = () => {
 							<div className={styles.gameContent}>
 								<h3 className={styles.gameName}>{game.name}</h3>
 								<p className={styles.gameDescription}>{game.description}</p>
-								
+
 								<div className={styles.gameInfo}>
 									<div className={styles.infoItem}>
 										<span className={styles.infoIcon}>👥</span>

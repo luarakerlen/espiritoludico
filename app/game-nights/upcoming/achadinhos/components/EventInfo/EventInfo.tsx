@@ -20,7 +20,7 @@ const EventInfo = () => {
 			number: '03',
 			title: 'Troque por Brindes',
 			description:
-				'Cada estrelinha pode ser trocada por brindes exclusivos! Quanto mais estrelinhas, melhores os presentes. Todo o acervo também estará disponível para jogar livremente.',
+				'Cada estrelinha pode ser trocada por brindes! Quanto mais estrelinhas, mais brindes você consegue. Todo o acervo também estará disponível para jogar livremente.',
 			icon: '🎁',
 		},
 	];
@@ -33,7 +33,7 @@ const EventInfo = () => {
 					<h2 className={styles.title}>Como Funcionam os Achadinhos</h2>
 					<div className={styles.decorationLine}></div>
 					<p className={styles.subtitle}>
-						Jogos Legais que Quase Ninguém Conhece - Descubra, Jogue e Ganhe!
+						Descubra, Jogue e Ganhe!
 					</p>
 				</div>
 
@@ -59,7 +59,7 @@ const EventInfo = () => {
 
 				<div className={styles.callToAction}>
 					<p className={styles.ctaText}>
-						✨ Venha expandir seus horizontes e descobrir novos jogos favoritos!
+						Venha descobrir novos jogos favoritos!
 					</p>
 				</div>
 			</div>

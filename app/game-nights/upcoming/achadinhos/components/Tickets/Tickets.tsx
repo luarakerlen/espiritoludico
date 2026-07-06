@@ -6,8 +6,41 @@ import styles from './Tickets.module.css';
 const Tickets = () => {
 	const ticketTypes = [
 		{
-			type: 'Individual',
-			price: 'R$ 30,00',
+			type: 'Lote exclusivo',
+			price: 'R$ 40,00',
+			description: <span>
+				Por dupla
+				<br/>
+				<span style={{ fontSize: '0.875rem' }}>Um ingresso para um veterano e um para um amigo que nunca esteve em nossos eventos.</span>
+			</span>,
+			salesUntil: 'Em breve',
+			features: [
+				{
+					text: 'Exclusivo quem já esteve em nossos eventos anteriores e convidar um amigo que nunca foi',
+					hasAccess: true,
+				},
+				{
+					text: 'Acesso a todos os achadinhos selecionados',
+					hasAccess: true,
+				},
+				{
+					text: 'Ganhe estrelinhas por cada jogo jogado',
+					hasAccess: true,
+				},
+				{
+					text: 'Troque estrelinhas por brindes',
+					hasAccess: true,
+				},
+				{
+					text: 'Acesso a todo o acervo de jogos',
+					hasAccess: true,
+				},
+			],
+			popular: true,
+		},
+		{
+			type: '1º Lote',
+			price: 'R$ 25,00',
 			description: 'Por pessoa',
 			salesUntil: 'Em breve',
 			features: [
@@ -31,15 +64,9 @@ const Tickets = () => {
 			popular: false,
 		},
 		{
-			type: 'Equipe',
-			price: 'R$ 25,00',
-			description: (
-				<span>
-					Por pessoa
-					<br />
-					(a partir de 3 pessoas)
-				</span>
-			),
+			type: '2º Lote',
+			price: 'R$ 30,00',
+			description: 'Por pessoa',
 			salesUntil: 'Em breve',
 			features: [
 				{
@@ -58,12 +85,8 @@ const Tickets = () => {
 					text: 'Acesso a todo o acervo de jogos',
 					hasAccess: true,
 				},
-				{
-					text: 'Valor promocional para equipes',
-					hasAccess: true,
-				},
 			],
-			popular: true,
+			popular: false,
 		},
 	];
 

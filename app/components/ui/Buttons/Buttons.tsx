@@ -46,13 +46,14 @@ export const SymplaButton = ({
 
 interface WhatsappButtonProps extends ButtonProps {
 	ticketType?: string;
+	eventName?: string;
 }
 
-export const WhatsappButton = ({ ticketType, label, variant = 'default' }: WhatsappButtonProps) => {
+export const WhatsappButton = ({ ticketType, eventName, label, variant = 'default' }: WhatsappButtonProps) => {
 	const handleWhatsAppClick = () => {
 		trackEvent(AnalyticsEvent.CLICK_WHATSAPP, AnalyticsCategory.COMPRA, label);
 		const message = encodeURIComponent(
-			`Olá! Gostaria de comprar ingressos ${ticketType ? `do tipo ${ticketType}` : ''} para o Espírito Lúdico Game Night - Investigação pelo Pix.`,
+			`Olá! Gostaria de comprar ingressos ${ticketType ? `do tipo ${ticketType}` : ''} para o Espírito Lúdico Game Night - ${eventName} pelo Pix.`,
 		);
 		window.open(`https://wa.me/5527995240773?text=${message}`, '_blank');
 	};

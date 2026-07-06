@@ -19,7 +19,7 @@ const FAQ = () => {
 		{
 			question: 'Como funciona o sistema de estrelinhas?',
 			answer:
-				'Para cada achadinho que você jogar, você ganha uma estrelinha! As estrelinhas podem ser trocadas por brindes exclusivos. É nossa forma de recompensar sua curiosidade e incentivar a descoberta de novos jogos.',
+				'Para cada achadinho que você jogar, você ganha uma estrelinha! Cada estrelinha nova desbloqueia brindes. É nossa forma de recompensar sua curiosidade e incentivar a descoberta de novos jogos.',
 		},
 		{
 			question: 'Preciso ter experiência com jogos de tabuleiro?',
@@ -37,14 +37,9 @@ const FAQ = () => {
 				'Com certeza! Muitos participantes vêm sozinhos e acabam fazendo novos amigos durante o evento. É uma ótima oportunidade para socializar e conhecer pessoas com interesses similares.',
 		},
 		{
-			question: 'Quais brindes posso ganhar com as estrelinhas?',
-			answer:
-				'Teremos uma variedade de brindes exclusivos, incluindo itens temáticos, descontos em locações futuras e surpresas especiais. Quanto mais estrelinhas você acumular, melhores serão os brindes disponíveis para troca.',
-		},
-		{
 			question: 'O evento é adequado para menores de idade?',
 			answer:
-				'Sim, o evento é adequado para todas as idades! No entanto, menores de 16 anos devem estar acompanhados de um responsável.',
+				'Sim, o evento é adequado para todas as idades! Crianças até 6 anos não pagam ingresso. Ele começa a ser cobrado para crianças a partir de 7 anos.',
 		},
 		{
 			question: 'Preciso levar algo para o evento?',

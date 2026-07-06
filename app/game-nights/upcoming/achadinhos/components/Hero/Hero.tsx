@@ -24,7 +24,7 @@ const Hero = () => {
 
 					<div className={styles.tagline}>
 						<p className={styles.taglineText}>
-							✨ Descubra jogos incríveis que quase ninguém conhece!
+							Descubra jogos incríveis que você ainda não conhece!
 						</p>
 					</div>
 				</div>
@@ -32,7 +32,7 @@ const Hero = () => {
 				<div className={styles.rightColumn}>
 					<div className={styles.buttonsContainer}>
 						<SymplaButton />
-						<WhatsappButton />
+						<WhatsappButton eventName='Achadinhos' />
 					</div>
 
 					<Countdown targetDate='2026-09-12T18:30:00' />
