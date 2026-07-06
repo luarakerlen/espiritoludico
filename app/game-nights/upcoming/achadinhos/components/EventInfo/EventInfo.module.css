@@ -1,0 +1,198 @@
+.eventInfo {
+	position: relative;
+	padding: 5rem 2rem;
+	background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.backgroundTexture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		radial-gradient(circle at 50% 50%, rgba(0, 95, 153, 0.05) 0%, transparent 70%),
+		repeating-linear-gradient(
+			45deg,
+			transparent,
+			transparent 10px,
+			rgba(255, 107, 53, 0.02) 10px,
+			rgba(255, 107, 53, 0.02) 20px
+		);
+	pointer-events: none;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.title {
+	font-size: 2.5rem;
+	color: #08306f;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.decorationLine {
+	width: 100px;
+	height: 4px;
+	background: linear-gradient(90deg, #FF6B35, #e6397d);
+	margin: 0 auto 1.5rem;
+	border-radius: 2px;
+}
+
+.subtitle {
+	font-size: 1.25rem;
+	color: #1a1a1a;
+	max-width: 700px;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+.stepsContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.stepCard {
+	position: relative;
+	background: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgba(255, 107, 53, 0.3);
+	border-radius: 16px;
+	padding: 2rem;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.stepCard:hover {
+	transform: translateY(-5px);
+	background: rgba(255, 255, 255, 1);
+	border-color: #FF6B35;
+	box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+.stepNumber {
+	position: absolute;
+	top: -15px;
+	left: 20px;
+	background: linear-gradient(135deg, #FF6B35, #e6397d);
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.stepIcon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.stepCardInner {
+	position: relative;
+}
+
+.stepContent {
+	text-align: center;
+}
+
+.stepTitle {
+	font-size: 1.5rem;
+	color: #005f99;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.stepDescription {
+	font-size: 1rem;
+	color: #4a4a4a;
+	line-height: 1.6;
+}
+
+.star {
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
+	opacity: 0.3;
+}
+
+.starShape {
+	width: 40px;
+	height: 40px;
+	background: #FFC107;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.callToAction {
+	text-align: center;
+	padding: 2rem;
+	background: rgba(0, 95, 153, 0.1);
+	border-radius: 12px;
+	border: 2px solid rgba(0, 95, 153, 0.3);
+}
+
+.ctaText {
+	font-size: 1.25rem;
+	color: #08306f;
+	font-weight: 600;
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.eventInfo {
+		padding: 3rem 1rem;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.stepsContainer {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	.stepCard {
+		padding: 1.5rem;
+	}
+
+	.stepNumber {
+		width: 40px;
+		height: 40px;
+		font-size: 1.25rem;
+		top: -12px;
+		left: 15px;
+	}
+
+	.stepIcon {
+		font-size: 2.5rem;
+	}
+
+	.stepTitle {
+		font-size: 1.25rem;
+	}
+
+	.ctaText {
+		font-size: 1rem;
+	}
+}

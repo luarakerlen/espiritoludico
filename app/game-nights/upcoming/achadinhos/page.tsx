@@ -1,34 +1,34 @@
 import type { Metadata } from 'next';
+import AnalyticsTracker from './components/AnalyticsTracker/AnalyticsTracker';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+import EventInfo from './components/EventInfo/EventInfo';
+import Games from './components/Games/Games';
+import Tickets from './components/Tickets/Tickets';
+import FAQ from './components/FAQ/FAQ';
+import CookieBanner from './components/CookieBanner/CookieBanner';
+
+import styles from './page.module.css';
 
 export const metadata: Metadata = {
-	title: 'Próximos Eventos - Espírito Lúdico',
+	title: 'Achadinhos da Espírito Lúdico - Espírito Lúdico',
 	description:
-		'Confira os próximos eventos e game nights da Espírito Lúdico.',
+		'Descubra jogos de tabuleiro incríveis que quase ninguém conhece! Ganhe estrelinhas e brindes em cada jogo experimentado.',
 };
 
-export default function UpcomingGameNightsPage() {
+export default function AchadinhosPage() {
 	return (
-		<main
-			style={{
-				minHeight: '100vh',
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				justifyContent: 'center',
-				gap: '1rem',
-				padding: '2rem',
-				textAlign: 'center',
-			}}
-		>
-			<h1>Próximos Eventos</h1>
-			<p>Em breve divulgaremos a próxima game night.</p>
-			<a
-				href='https://www.sympla.com.br/produtor/espiritoludico'
-				target='_blank'
-				rel='noopener noreferrer'
-			>
-				Ver eventos no Sympla
-			</a>
-		</main>
+		<div className='achadinhosTheme'>
+			<main className={styles.main}>
+				<AnalyticsTracker />
+				<Header />
+				<Hero />
+				<EventInfo />
+				<Games />
+				<Tickets />
+				<FAQ />
+				<CookieBanner />
+			</main>
+		</div>
 	);
 }

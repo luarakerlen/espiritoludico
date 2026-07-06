@@ -5,9 +5,6 @@
 	border: none;
 	border-radius: 8px;
 	cursor: pointer;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-family: 'Courier New', monospace;
 	position: relative;
 	overflow: hidden;
 	transition: all 0.3s ease;
@@ -34,13 +31,30 @@
 	left: 100%;
 }
 
-.symplaButton {
+.default {
+	background: #08306f;
+	color: white;
+	box-shadow: 0 4px 15px #08306f;
+}
+
+.default:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px #08306f;
+}
+
+.investigation {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'Courier New', monospace;
+}
+
+.investigationBg {
 	background: linear-gradient(135deg, #9f1615, #7a1010);
 	color: white;
 	box-shadow: 0 4px 15px rgba(159, 22, 21, 0.3);
 }
 
-.symplaButton:hover {
+.investigationBg:hover {
 	background: linear-gradient(135deg, #7a1010, #9f1615);
 	transform: translateY(-2px);
 	box-shadow: 0 6px 20px rgba(159, 22, 21, 0.4);

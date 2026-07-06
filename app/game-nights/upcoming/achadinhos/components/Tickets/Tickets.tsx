@@ -1,76 +1,89 @@
 'use client';
 
-import { AnalyticsLabel } from '../../lib/analytics/labels';
 import { SymplaButton, WhatsappButton } from '../../../../../components/ui';
 import styles from './Tickets.module.css';
 
 const Tickets = () => {
 	const ticketTypes = [
 		{
-			type: 'Individual',
-			price: 'R$ 30,00',
-			description: 'Por detetive',
-			salesUntil: '03 de fevereiro',
+			type: 'Lote exclusivo',
+			price: 'R$ 40,00',
+			description: <span>
+				Por dupla
+				<br/>
+				<span style={{ fontSize: '0.875rem' }}>Um ingresso para um veterano e um para um amigo que nunca esteve em nossos eventos.</span>
+			</span>,
+			salesUntil: 'Em breve',
 			features: [
 				{
-					text: 'Acesso completo à investigação',
+					text: 'Exclusivo quem já esteve em nossos eventos anteriores e convidar um amigo que nunca foi',
 					hasAccess: true,
 				},
 				{
-					text: 'Acesso a todos os jogos de tabuleiro disponíveis',
+					text: 'Acesso a todos os achadinhos selecionados',
 					hasAccess: true,
 				},
 				{
-					text: 'Não possui valor promocional',
-					hasAccess: false,
-				},
-			],
-			popular: false,
-		},
-		{
-			type: 'Equipe',
-			price: 'R$ 25,00',
-			description: (
-				<span>
-					Por detetive
-					<br />
-					(a partir de 3 pessoas)
-				</span>
-			),
-			salesUntil: '03 de fevereiro',
-			features: [
-				{
-					text: 'Acesso completo à investigação',
+					text: 'Ganhe estrelinhas por cada jogo jogado',
 					hasAccess: true,
 				},
 				{
-					text: 'Acesso a todos os jogos de tabuleiro disponíveis',
+					text: 'Troque estrelinhas por brindes',
 					hasAccess: true,
 				},
 				{
-					text: 'Valor promocional para equipes',
+					text: 'Acesso a todo o acervo de jogos',
 					hasAccess: true,
 				},
 			],
 			popular: true,
 		},
 		{
-			type: 'Simples',
-			price: 'R$ 20,00',
+			type: '1º Lote',
+			price: 'R$ 25,00',
 			description: 'Por pessoa',
-			salesUntil: '07 de fevereiro',
+			salesUntil: 'Em breve',
 			features: [
 				{
-					text: 'Acesso ao ambiente do evento',
+					text: 'Acesso a todos os achadinhos selecionados',
 					hasAccess: true,
 				},
 				{
-					text: 'Acesso a todos os jogos de tabuleiro disponíveis',
+					text: 'Ganhe estrelinhas por cada jogo jogado',
 					hasAccess: true,
 				},
 				{
-					text: 'Não participa da investigação',
-					hasAccess: false,
+					text: 'Troque estrelinhas por brindes',
+					hasAccess: true,
+				},
+				{
+					text: 'Acesso a todo o acervo de jogos',
+					hasAccess: true,
+				},
+			],
+			popular: false,
+		},
+		{
+			type: '2º Lote',
+			price: 'R$ 30,00',
+			description: 'Por pessoa',
+			salesUntil: 'Em breve',
+			features: [
+				{
+					text: 'Acesso a todos os achadinhos selecionados',
+					hasAccess: true,
+				},
+				{
+					text: 'Ganhe estrelinhas por cada jogo jogado',
+					hasAccess: true,
+				},
+				{
+					text: 'Troque estrelinhas por brindes',
+					hasAccess: true,
+				},
+				{
+					text: 'Acesso a todo o acervo de jogos',
+					hasAccess: true,
 				},
 			],
 			popular: false,
@@ -78,9 +91,9 @@ const Tickets = () => {
 	];
 
 	const eventInfo = {
-		date: '7 de Fevereiro',
+		date: 'Em breve',
 		time: '18h30 às 22h',
-		location: "Pizzaria e Galetos Berg'z",
+		location: 'A confirmar',
 	};
 
 	return (
@@ -104,14 +117,6 @@ const Tickets = () => {
 						<div className={styles.icon}>📍</div>
 						<h3>Onde?</h3>
 						<p>{eventInfo.location}</p>
-						<a
-							href='https://maps.app.goo.gl/7pmy15VuanQq4ZwPA'
-							target='_blank'
-							rel='noopener noreferrer'
-							className={`${styles.infoDetail} ${styles.infoDetailLink}`}
-						>
-							Ver no Google Maps
-						</a>
 					</div>
 				</div>
 
@@ -155,15 +160,8 @@ const Tickets = () => {
 								</ul>
 
 								<div className={styles.ticketButtons}>
-									<SymplaButton
-										label={`${AnalyticsLabel.BOTAO_SYMPLA}_${ticket.type.toLowerCase()}`}
-										variant='investigation'
-									/>
-									<WhatsappButton
-										label={`${AnalyticsLabel.BOTAO_WHATSAPP}_${ticket.type.toLowerCase()}`}
-										ticketType={ticket.type}
-										variant='investigation'
-									/>
+									<SymplaButton />
+									<WhatsappButton ticketType={ticket.type} />
 								</div>
 							</div>
 						</div>

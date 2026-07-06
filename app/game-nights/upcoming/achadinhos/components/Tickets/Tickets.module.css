@@ -1,0 +1,243 @@
+.tickets {
+	position: relative;
+	padding: 5rem 2rem;
+	background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.backgroundTexture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		radial-gradient(circle at 30% 70%, rgba(255, 107, 53, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 70% 30%, rgba(230, 57, 125, 0.05) 0%, transparent 50%);
+	pointer-events: none;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.title {
+	font-size: 2.5rem;
+	color: #08306f;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.decorationLine {
+	width: 100px;
+	height: 4px;
+	background: linear-gradient(90deg, #FF6B35, #e6397d);
+	margin: 0 auto;
+	border-radius: 2px;
+}
+
+.eventDetails {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-bottom: 4rem;
+}
+
+.detailCard {
+	background: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgba(255, 107, 53, 0.3);
+	border-radius: 16px;
+	padding: 2rem;
+	text-align: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detailCard:hover {
+	transform: translateY(-5px);
+	background: rgba(255, 255, 255, 1);
+	border-color: #FF6B35;
+}
+
+.icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.detailCard h3 {
+	color: #005f99;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}
+
+.detailCard p {
+	color: #4a4a4a;
+	font-size: 1.1rem;
+	margin: 0.5rem 0;
+}
+
+.infoDetail {
+	color: #FF6B35;
+	font-weight: 600;
+}
+
+.ticketsHeader {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.ticketsGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.ticketCard {
+	position: relative;
+}
+
+.popularBadge {
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: linear-gradient(135deg, #FF6B35, #e6397d);
+	color: #fff;
+	padding: 0.5rem 1.5rem;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 0.875rem;
+	z-index: 10;
+	box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.ticketCardInner {
+	background: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgba(255, 107, 53, 0.3);
+	border-radius: 16px;
+	padding: 2rem;
+	transition: all 0.3s ease;
+	height: 100%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ticketCardInner.popular {
+	background: rgba(230, 57, 125, 0.05);
+	border-color: #e6397d;
+	box-shadow: 0 10px 30px rgba(230, 57, 125, 0.15);
+}
+
+.ticketCardInner:hover {
+	transform: translateY(-5px);
+}
+
+.ticketHeader {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.ticketType {
+	font-size: 1.75rem;
+	color: #08306f;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+}
+
+.price {
+	margin: 1rem 0;
+}
+
+.currency {
+	font-size: 2rem;
+	color: #1a1a1a;
+	font-weight: 700;
+}
+
+.ticketDescription {
+	color: #4a4a4a;
+	font-size: 1rem;
+	margin: 1rem 0;
+	line-height: 1.6;
+}
+
+.salesUntil {
+	color: #FF6B35;
+	font-size: 0.875rem;
+	margin-top: 1rem;
+	font-weight: 500;
+}
+
+.featuresList {
+	list-style: none;
+	padding: 0;
+	margin: 1.5rem 0;
+}
+
+.feature {
+	color: #4a4a4a;
+	padding: 0.75rem 0;
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 0.95rem;
+}
+
+.checkmark {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	background: rgba(0, 95, 153, 0.2);
+	border-radius: 50%;
+	color: #005f99;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.ticketButtons {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+	.tickets {
+		padding: 3rem 1rem;
+	}
+
+	.title {
+		font-size: 2rem;
+	}
+
+	.eventDetails {
+		grid-template-columns: 1fr;
+	}
+
+	.ticketsGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.ticketCardInner {
+		padding: 1.5rem;
+	}
+
+	.ticketType {
+		font-size: 1.5rem;
+	}
+
+	.currency {
+		font-size: 1.75rem;
+	}
+}
