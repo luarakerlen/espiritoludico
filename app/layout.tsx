@@ -35,12 +35,33 @@ export const metadata: Metadata = {
 		'jogos de tabuleiro espirito santo',
 	],
 	authors: [{ name: 'Luara Kerlen dos Santos Rangel' }],
+	metadataBase: new URL('https://espiritoludico.vercel.app/'),
 	openGraph: {
 		title: 'Espírito Lúdico - Aluguel de Jogos de Tabuleiro no Espírito Santo',
 		description:
 			'Aluguel de jogos de tabuleiro em Cariacica, ES. Desperte o espírito lúdico em você e crie conexões autênticas com quem você ama. Jogos clássicos e modernos para todas as idades.',
 		type: 'website',
 		locale: 'pt_BR',
+		images: [
+			{
+				url: '/logos/Fundo_azul_aluguel.png',
+				width: 1200,
+				height: 630,
+				alt: 'Espírito Lúdico',
+			},
+		],
+		url: 'https://espiritoludico.vercel.app/',
+		siteName: 'Espírito Lúdico',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Espírito Lúdico',
+		description:
+			'Aluguel de jogos de tabuleiro em Cariacica, ES. Desperte o espírito lúdico em você e crie conexões autênticas com quem você ama. Jogos clássicos e modernos para todas as idades.',
+		images: ['/logos/Fundo_azul_aluguel.png'],
+	},
+	icons: {
+		icon: '/favicon.ico',
 	},
 };
 
