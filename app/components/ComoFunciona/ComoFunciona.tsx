@@ -121,7 +121,7 @@ export default function ComoFunciona() {
 						<span className={styles.benefitIcon}>🎲</span>
 						<div>
 							<h4>Variedade Imensa</h4>
-							<p>Mais de 80 jogos diferentes para escolher</p>
+							<p>Mais de 90 jogos diferentes para escolher</p>
 						</div>
 					</div>
 					<div className={styles.benefit}>
