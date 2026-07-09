@@ -9,17 +9,21 @@ const getButtonClasses = (variant?: string) => {
 	if (variant === 'default') {
 		classes.push(styles.default);
 	}
-	
+
 	if (variant === 'investigation') {
 		classes.push(styles.investigation, styles.investigationBg);
 	}
-	
+
+	if (variant === 'halloween') {
+		classes.push(styles.halloween, styles.halloweenBg);
+	}
+
 	return classes.join(' ');
 };
 
 interface ButtonProps {
 	label?: string;
-	variant?: 'default' | 'investigation';
+	variant?: 'default' | 'investigation' | 'halloween';
 }
 
 export const SymplaButton = ({

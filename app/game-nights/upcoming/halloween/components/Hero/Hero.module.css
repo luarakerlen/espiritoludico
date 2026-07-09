@@ -1,0 +1,69 @@
+.hero {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 2rem;
+	background: linear-gradient(180deg, #1a0a00 0%, #2d1f0f 50%, #1a0a00 100%);
+}
+
+.backgroundTexture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		radial-gradient(circle at 20% 80%, rgba(255, 102, 0, 0.1) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(128, 0, 128, 0.1) 0%, transparent 50%);
+	pointer-events: none;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+	position: relative;
+	z-index: 1;
+}
+
+.artContainer {
+	width: 100%;
+	max-width: 800px;
+	display: flex;
+	justify-content: center;
+}
+
+.mainArt {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(255, 102, 0, 0.3);
+	border: 3px solid rgba(255, 102, 0, 0.5);
+}
+
+.buttonsContainer {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media (max-width: 768px) {
+	.hero {
+		padding: 1rem;
+	}
+
+	.buttonsContainer {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.buttonsContainer button {
+		width: 100%;
+	}
+}
