@@ -60,6 +60,24 @@
 	box-shadow: 0 6px 20px rgba(159, 22, 21, 0.4);
 }
 
+.halloween {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: 'Courier New', monospace;
+}
+
+.halloweenBg {
+	background: linear-gradient(135deg, #ff6600, #ff3300);
+	color: white;
+	box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.halloweenBg:hover {
+	background: linear-gradient(135deg, #ff3300, #ff6600);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+}
+
 .whatsappButton {
 	background: linear-gradient(135deg, #25d366, #128c7e);
 	color: white;

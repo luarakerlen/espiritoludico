@@ -18,4 +18,9 @@ export const upcomingGameNights: GameNightEvent[] = [
 		title: 'Achadinhos',
 		href: '/game-nights/upcoming/achadinhos',
 	},
+	{
+		slug: 'halloween',
+		title: 'Halloween',
+		href: '/game-nights/upcoming/halloween',
+	},
 ];
