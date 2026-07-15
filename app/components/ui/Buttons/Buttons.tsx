@@ -1,6 +1,6 @@
-import { trackEvent } from '../../../game-nights/past/investigation/lib/analytics';
-import { AnalyticsCategory } from '../../../game-nights/past/investigation/lib/analytics/categories';
-import { AnalyticsEvent } from '../../../game-nights/past/investigation/lib/analytics/events';
+import { trackEvent } from '../../../eventos/passados/investigation/lib/analytics';
+import { AnalyticsCategory } from '../../../eventos/passados/investigation/lib/analytics/categories';
+import { AnalyticsEvent } from '../../../eventos/passados/investigation/lib/analytics/events';
 import styles from './Buttons.module.css';
 
 const getButtonClasses = (variant?: string) => {

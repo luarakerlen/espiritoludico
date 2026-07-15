@@ -10,7 +10,6 @@ import {
 } from '../../helpers/gameNights';
 
 type EventosNavProps = {
-	onScrollToEventos: () => void;
 	onCloseMobileMenu: () => void;
 };
 
@@ -38,23 +37,15 @@ function EventList({
 }
 
 export default function EventosNav({
-	onScrollToEventos,
 	onCloseMobileMenu,
 }: EventosNavProps) {
-	const [eventosOpen, setEventosOpen] = useState(false);
 	const [pastOpen, setPastOpen] = useState(false);
 	const [upcomingOpen, setUpcomingOpen] = useState(false);
 
 	const closeAll = () => {
-		setEventosOpen(false);
 		setPastOpen(false);
 		setUpcomingOpen(false);
 		onCloseMobileMenu();
-	};
-
-	const handleScrollToEventos = () => {
-		onScrollToEventos();
-		closeAll();
 	};
 
 	const handleLinkClick = () => {
@@ -68,20 +59,16 @@ export default function EventosNav({
 					type='button'
 					className={`${styles.navLink} ${styles.eventosTrigger}`}
 					aria-haspopup='true'
+					onClick={() => {
+						window.location.href = '/eventos';
+					}}
 				>
 					Eventos
 				</button>
 				<div className={styles.eventosDropdown}>
-					<button
-						type='button'
-						className={styles.eventosDropdownItem}
-						onClick={handleScrollToEventos}
-					>
-						O que é?
-					</button>
 					<div className={styles.eventosSubmenu}>
 						<span className={styles.eventosDropdownItem}>
-							Eventos anteriores
+							Eventos passados
 							<span className={styles.submenuArrow} aria-hidden='true'>
 								›
 							</span>
@@ -92,7 +79,7 @@ export default function EventosNav({
 					</div>
 					<div className={styles.eventosSubmenu}>
 						<span className={styles.eventosDropdownItem}>
-							Próximos eventos
+							Eventos futuros
 							<span className={styles.submenuArrow} aria-hidden='true'>
 								›
 							</span>
@@ -111,99 +98,12 @@ export default function EventosNav({
 				<button
 					type='button'
 					className={`${styles.navLink} ${styles.eventosAccordionTrigger}`}
-					onClick={() => setEventosOpen(!eventosOpen)}
-					aria-expanded={eventosOpen}
+					onClick={() => {
+						window.location.href = '/eventos';
+					}}
 				>
 					Eventos
-					<span
-						className={`${styles.chevron} ${eventosOpen ? styles.chevronOpen : ''}`}
-						aria-hidden='true'
-					>
-						▼
-					</span>
 				</button>
-
-				{eventosOpen && (
-					<div className={styles.eventosAccordionContent}>
-						<button
-							type='button'
-							className={`${styles.navLink} ${styles.eventosAccordionItem}`}
-							onClick={handleScrollToEventos}
-						>
-							O que é?
-						</button>
-
-						<div className={styles.eventosAccordionGroup}>
-							<button
-								type='button'
-								className={`${styles.navLink} ${styles.eventosAccordionSubTrigger}`}
-								onClick={() => setPastOpen(!pastOpen)}
-								aria-expanded={pastOpen}
-							>
-								Eventos anteriores
-								<span
-									className={`${styles.chevron} ${pastOpen ? styles.chevronOpen : ''}`}
-									aria-hidden='true'
-								>
-									▼
-								</span>
-							</button>
-							{pastOpen && (
-								<div className={styles.eventosAccordionSubContent}>
-									{pastGameNights.length === 0 ? (
-										<span className={styles.eventosEmpty}>Nenhum evento</span>
-									) : (
-										pastGameNights.map((event) => (
-											<Link
-												key={event.slug}
-												href={event.href}
-												className={`${styles.navLink} ${styles.eventosAccordionLink}`}
-												onClick={handleLinkClick}
-											>
-												{event.title}
-											</Link>
-										))
-									)}
-								</div>
-							)}
-						</div>
-
-						<div className={styles.eventosAccordionGroup}>
-							<button
-								type='button'
-								className={`${styles.navLink} ${styles.eventosAccordionSubTrigger}`}
-								onClick={() => setUpcomingOpen(!upcomingOpen)}
-								aria-expanded={upcomingOpen}
-							>
-								Próximos eventos
-								<span
-									className={`${styles.chevron} ${upcomingOpen ? styles.chevronOpen : ''}`}
-									aria-hidden='true'
-								>
-									▼
-								</span>
-							</button>
-							{upcomingOpen && (
-								<div className={styles.eventosAccordionSubContent}>
-									{upcomingGameNights.length === 0 ? (
-										<span className={styles.eventosEmpty}>Nenhum evento</span>
-									) : (
-										upcomingGameNights.map((event) => (
-											<Link
-												key={event.slug}
-												href={event.href}
-												className={`${styles.navLink} ${styles.eventosAccordionLink}`}
-												onClick={handleLinkClick}
-											>
-												{event.title}
-											</Link>
-										))
-									)}
-								</div>
-							)}
-						</div>
-					</div>
-				)}
 			</div>
 		</div>
 	);

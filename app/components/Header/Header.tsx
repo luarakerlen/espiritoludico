@@ -2,14 +2,22 @@
 
 import { useState } from "react";
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 import EventosNav from './EventosNav';
 import { phoneNumber } from '../../helpers/consts';
 
 export default function Header() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const pathname = usePathname();
 
 	const scrollToSection = (sectionId: string) => {
+		if (pathname !== '/') {
+			window.location.href = `/#${sectionId}`;
+			return;
+		}
+
 		const element = document.getElementById(sectionId);
 		element?.scrollIntoView({ behavior: 'smooth' });
 		setMobileMenuOpen(false);
@@ -35,6 +43,7 @@ export default function Header() {
 						width={180}
 						height={40}
 						className={styles.logoImage}
+						onClick={() => (window.location.href = '/')}
 					/>
 				</div>
 
@@ -57,10 +66,6 @@ export default function Header() {
 					>
 						Jogos
 					</button>
-					<EventosNav
-						onScrollToEventos={() => scrollToSection('eventos')}
-						onCloseMobileMenu={() => setMobileMenuOpen(false)}
-					/>
 					<button
 						onClick={() => scrollToSection('comunidade')}
 						className={styles.navLink}
@@ -73,6 +78,7 @@ export default function Header() {
 					>
 						Quem somos
 					</button>
+					<EventosNav onCloseMobileMenu={() => setMobileMenuOpen(false)} />
 				</nav>
 
 				<div className={styles.actions}>

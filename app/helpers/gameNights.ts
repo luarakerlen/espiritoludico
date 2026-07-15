@@ -8,7 +8,7 @@ export const pastGameNights: GameNightEvent[] = [
 	{
 		slug: 'investigation',
 		title: 'Investigação',
-		href: '/game-nights/past/investigation',
+		href: '/eventos/passados/investigation',
 	},
 ];
 
@@ -16,11 +16,11 @@ export const upcomingGameNights: GameNightEvent[] = [
 	{
 		slug: 'achadinhos',
 		title: 'Achadinhos',
-		href: '/game-nights/upcoming/achadinhos',
+		href: '/eventos/futuros/achadinhos',
 	},
 	{
 		slug: 'halloween',
 		title: 'Halloween',
-		href: '/game-nights/upcoming/halloween',
+		href: '/eventos/futuros/halloween',
 	},
 ];

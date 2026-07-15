@@ -50,7 +50,7 @@ export default function QuemSomos() {
               <div className={styles.imageOverlay}>
                 <div className={styles.founderBadge}>
                   <Image
-                    src="/logos/Pino_rosa.png"
+                    src="/logos/Pino_branco.png"
                     alt="Espírito Lúdico"
                     width={30}
                     height={30}
